@@ -135,7 +135,7 @@ const QUESTIONS = [
 
 const CATEGORIES = ["Physical","Emotional","Work & Productivity","Lifestyle & Recovery"];
 
-function getResult(score) {
+function getResult(score: number) {
   if (score <= 8)  return { level:"Thriving", color:"#10b981", bg:"linear-gradient(135deg,#052e16,#14532d)", desc:"Your stress levels appear well managed. You have good resilience and recovery habits. Keep doing what you're doing — and stay aware of what's working.", recs:[
     { icon:"🌿", title:"Maintain your habits", desc:"Whatever you're doing is working. Protect your recovery routines — they're your armour against future stress." },
     { icon:"🔍", title:"Stay self-aware", desc:"Check in with yourself monthly. Burnout is easier to prevent than recover from." },
