@@ -394,5 +394,42 @@ export default function App(){
       <div className="disclaimer"><strong>⚕️ Medical Disclaimer:</strong> This tool provides general educational information based on Dietary Reference Intakes (DRIs) from the National Academies of Sciences, Engineering, and Medicine and the NIH Office of Dietary Supplements. Individual requirements vary. This is not a substitute for professional medical advice. Consult a registered dietitian or physician before starting any supplement program.</div>
       <div className="btn-row" style={{justifyContent:"center"}}><button className="btn btn-reset" onClick={()=>{setStep(1);setOpen({fat:true,water:true,major:false,trace:false,omega:false,bonus:false});}}>← Start Over</button></div>
     </div>)}
+
+      {/* SEO CONTENT */}
+      <div className="seo-section">
+        <div className="seo-intro">
+          <h2>What Is a Vitamin and Mineral Calculator?</h2>
+          <p>A vitamin and mineral calculator gives you <strong>personalized daily nutrient targets</strong> based on your specific age, sex, body weight, diet type, and life stage. Instead of generic one-size-fits-all recommendations, you get numbers that are actually relevant to your body and your lifestyle.</p>
+          <p>Most people have no idea how much Vitamin D, magnesium, iron, or Omega-3 they actually need. The reality is that <strong>nutrient needs vary dramatically</strong> between a 25-year-old male athlete, a 55-year-old postmenopausal woman, and a pregnant vegan. What is enough for one person may be dangerously deficient for another.</p>
+          <p>The Body HQ Nutrient Calculator covers <strong>40+ essential vitamins, minerals, and beneficial compounds</strong> sourced from the National Academies of Sciences and the NIH Office of Dietary Supplements — the gold standard for dietary guidance in the United States.</p>
+        </div>
+        <div className="how-works">
+          <h2>How the Nutrient Calculator Works</h2>
+          <div className="step-row"><div className="step-num">1</div><div className="step-txt"><strong>Enter your profile</strong> — select your biological sex, age group, and body weight using the lbs/kg toggle.</div></div>
+          <div className="step-row"><div className="step-num">2</div><div className="step-txt"><strong>Select your life stage</strong> — choose Standard, Pregnant, or Breastfeeding. These dramatically change nutrient needs for folate, iron, iodine, and choline.</div></div>
+          <div className="step-row"><div className="step-num">3</div><div className="step-txt"><strong>Choose your diet type</strong> — selecting Vegan or Vegetarian flags nutrients where plant-based eaters are most at risk of deficiency.</div></div>
+          <div className="step-row"><div className="step-num">4</div><div className="step-txt"><strong>Select your activity level</strong> — athletes have higher protein requirements which the calculator adjusts automatically based on body weight.</div></div>
+          <div className="step-row"><div className="step-num">5</div><div className="step-txt"><strong>Review your personalized plan</strong> — results are organized into 6 expandable categories with daily targets, nutrient functions, and best food sources.</div></div>
+        </div>
+        <div className="faq-wrap">
+          <h2>Frequently Asked Questions</h2>
+          <div className="faq-row"><div className="faq-q">What is the difference between RDA and AI?</div><div className="faq-a"><strong>RDA (Recommended Dietary Allowance)</strong> is the daily amount meeting the needs of 97 to 98 percent of healthy people. <strong>AI (Adequate Intake)</strong> is used when there is not enough data for a full RDA — still a reliable daily target. Both come from the National Academies of Sciences.</div></div>
+          <div className="faq-row"><div className="faq-q">How much Vitamin D do I need daily?</div><div className="faq-a">The official RDA is <strong>600 IU (15 mcg) for adults under 70</strong> and 800 IU for adults over 70. Many researchers recommend 1000 to 2000 IU daily especially for people with limited sun exposure. Ask your doctor to test your 25(OH)D blood level.</div></div>
+          <div className="faq-row"><div className="faq-q">What nutrients are vegans most likely to be deficient in?</div><div className="faq-a">Vegans are at elevated risk for <strong>Vitamin B12, Vitamin D3, Omega-3 DHA and EPA, iron, zinc, iodine, calcium, and choline</strong>. B12 is the most critical — no reliable plant sources exist and deficiency causes irreversible nerve damage. All vegans must supplement with B12.</div></div>
+          <div className="faq-row"><div className="faq-q">Should I take supplements or get nutrients from food?</div><div className="faq-a">Whole food sources are almost always preferable. <strong>Food contains thousands of compounds that work together</strong> that supplements cannot replicate. Supplement only what you cannot reliably get from food — such as Vitamin D3, B12 for vegans, and Omega-3 DHA if you do not eat fatty fish regularly.</div></div>
+          <div className="faq-row"><div className="faq-q">How does magnesium affect sleep and stress?</div><div className="faq-a">Magnesium is important for <strong>sleep quality, stress regulation, and blood sugar control</strong>. It activates the parasympathetic nervous system responsible for rest and recovery. Most adults fall short of the RDA. Best sources are pumpkin seeds, almonds, spinach, and dark chocolate.</div></div>
+          <div className="faq-row"><div className="faq-q">Is this calculator safe to use if I have diabetes?</div><div className="faq-a">This calculator provides general educational information. <strong>If you have diabetes</strong>, your individual needs may differ significantly for chromium, magnesium, and other nutrients. Always consult your doctor or a registered dietitian before changing your diet or starting supplements.</div></div>
+        </div>
+        <div className="int-links">
+          <h3>🌿 Explore More Free Health Tools</h3>
+          <div className="links-grid">
+            <a href="/sleep" className="int-link"><div className="int-link-name">🌙 Sleep Cycle Calculator</div><div className="int-link-desc">Find your perfect bedtime based on 90-minute sleep cycles</div></a>
+            <a href="/fasting" className="int-link"><div className="int-link-name">⏰ Intermittent Fasting Calculator</div><div className="int-link-desc">Find your ideal fasting and eating windows across 6 protocols</div></a>
+            <a href="/burnout" className="int-link"><div className="int-link-name">🧠 Stress and Burnout Score</div><div className="int-link-desc">12-question assessment to understand your stress levels</div></a>
+            <a href="/pregnancy" className="int-link"><div className="int-link-name">🤰 Pregnancy Due Date Calculator</div><div className="int-link-desc">Calculate your due date using 3 different methods</div></a>
+          </div>
+        </div>
+        <div className="seo-disc">⚕️ <strong>Medical Disclaimer:</strong> This calculator provides general educational information based on Dietary Reference Intakes published by the National Academies of Sciences, Engineering, and Medicine. Individual nutrient needs vary. This is not a substitute for professional medical advice. Always consult a registered dietitian or physician before making significant dietary changes or starting any supplement regimen.</div>
+      </div>
   </div>);
 }
