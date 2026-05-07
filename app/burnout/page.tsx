@@ -417,6 +417,10 @@ export default function BurnoutCalc() {
 
         <div className="seo-disc">⚕️ <strong>Medical Disclaimer:</strong> This assessment is an educational screening tool only and is not a clinical diagnostic instrument. It is not a substitute for professional mental health assessment or treatment. If you are experiencing symptoms of severe burnout, depression, anxiety, or have any thoughts of self-harm, please contact a qualified mental health professional or call a crisis helpline immediately. In the US, call or text 988 to reach the Suicide and Crisis Lifeline.</div>
       </div>
+      </div>
+      </div>
+      </div>
+      </div>
     </div>
   );
 }
