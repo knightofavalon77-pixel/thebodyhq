@@ -375,8 +375,6 @@ export default function PregnancyCalc() {
             <button className="btn btn-reset" onClick={() => setResults(null)}>← Recalculate</button>
           </>
         )}
-      </div>
-    </div>
       {/* SEO CONTENT */}
       <div className="seo-wrap">
         <div className="seo-card">
@@ -454,6 +452,6 @@ export default function PregnancyCalc() {
 
         <div className="seo-disc">⚕️ <strong>Medical Disclaimer:</strong> This pregnancy due date calculator provides an estimate based on standard obstetric calculations and is for general educational purposes only. It is not a substitute for professional prenatal care. Due dates are estimates — only about 5% of babies arrive on their exact due date. Always consult your obstetrician, midwife, or healthcare provider for personalized pregnancy guidance and to confirm your due date via ultrasound.</div>
       </div>
-
+    </div>
   );
 }

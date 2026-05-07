@@ -489,8 +489,6 @@ export default function IFCalc() {
             <button className="btn btn-reset" onClick={() => setResults(null)}>← Change Protocol</button>
           </>
         )}
-      </div>
-    </div>
       {/* SEO CONTENT */}
       <div className="seo-wrap">
         <div className="seo-card">
@@ -568,6 +566,6 @@ export default function IFCalc() {
 
         <div className="seo-disc2">⚕️ <strong>Medical Disclaimer:</strong> Intermittent fasting is not suitable for everyone. Do not attempt any fasting protocol if you are pregnant, breastfeeding, have a history of eating disorders, take regular medication, have diabetes, or have any chronic health condition without first consulting your doctor. This calculator is for general educational purposes only and is not a substitute for professional medical advice.</div>
       </div>
-
+    </div>
   );
 }
