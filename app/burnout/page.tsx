@@ -340,6 +340,8 @@ export default function BurnoutCalc() {
             <button className="btn btn-reset" onClick={reset}>← Retake Assessment</button>
           </>
         )}
+      </div>
+
       {/* SEO CONTENT */}
       <div className="seo-wrap">
         <div className="seo-card">

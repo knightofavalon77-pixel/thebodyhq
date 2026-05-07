@@ -375,6 +375,8 @@ export default function PregnancyCalc() {
             <button className="btn btn-reset" onClick={() => setResults(null)}>← Recalculate</button>
           </>
         )}
+      </div>
+
       {/* SEO CONTENT */}
       <div className="seo-wrap">
         <div className="seo-card">
