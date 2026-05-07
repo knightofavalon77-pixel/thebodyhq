@@ -133,6 +133,31 @@ const S = () => (
     .disclaimer{background:var(--card2);border-radius:10px;padding:12px 14px;
       font-size:14px;color:var(--muted);line-height:1.6;margin-top:4px}
     @media(max-width:480px){.stats-grid{grid-template-columns:1fr 1fr}}
+
+    .seo-wrap{max-width:640px;margin:0 auto;padding:0 16px 48px}
+    .seo-card{background:var(--card);border:1px solid var(--border);border-radius:16px;padding:28px;margin-bottom:20px}
+    .seo-card h2{font-family:'Syne',sans-serif;font-size:22px;font-weight:800;color:var(--text);margin-bottom:14px}
+    .seo-card p{font-size:16px;color:var(--muted);line-height:1.8;margin-bottom:14px}
+    .seo-card p:last-child{margin-bottom:0}
+    .seo-card strong{color:var(--text)}
+    .seo-step{display:flex;gap:14px;margin-bottom:16px;align-items:flex-start}
+    .seo-num{background:#e8628a;color:#fff;width:28px;height:28px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:14px;font-weight:700;flex-shrink:0;margin-top:2px}
+    .seo-txt{font-size:16px;color:var(--muted);line-height:1.7}
+    .seo-txt strong{color:var(--text)}
+    .seo-faq{border-bottom:1px solid var(--border);padding:16px 0}
+    .seo-faq:last-child{border-bottom:none;padding-bottom:0}
+    .seo-faq-q{font-size:16px;font-weight:700;color:var(--text);margin-bottom:8px}
+    .seo-faq-a{font-size:15px;color:var(--muted);line-height:1.7}
+    .seo-faq-a strong{color:var(--text)}
+    .seo-links{background:rgba(232,98,138,.08);border:1px solid rgba(232,98,138,.25);border-radius:16px;padding:24px;margin-bottom:20px}
+    .seo-links h3{font-family:'Syne',sans-serif;font-size:18px;font-weight:700;color:#e8628a;margin-bottom:14px}
+    .seo-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:10px}
+    .seo-link{background:var(--card);border:1px solid var(--border);border-radius:10px;padding:12px;text-decoration:none;transition:all .2s;display:block}
+    .seo-link:hover{border-color:#e8628a}
+    .seo-link-name{font-size:15px;font-weight:600;color:var(--text)}
+    .seo-link-desc{font-size:13px;color:var(--muted);margin-top:3px}
+    .seo-disc{font-size:13px;color:var(--muted);line-height:1.6;padding:16px;background:var(--card);border:1px solid var(--border);border-radius:12px;margin-bottom:20px}
+    @media(max-width:480px){.seo-grid{grid-template-columns:1fr}}
   `}</style>
 );
 
@@ -352,5 +377,83 @@ export default function PregnancyCalc() {
         )}
       </div>
     </div>
+      {/* SEO CONTENT */}
+      <div className="seo-wrap">
+        <div className="seo-card">
+          <h2>What Is a Pregnancy Due Date Calculator?</h2>
+          <p>A pregnancy due date calculator estimates the date your baby is expected to arrive — known as your <strong>estimated due date (EDD)</strong>. It also maps out your pregnancy journey by trimester, shows key milestone dates, and identifies important scan and appointment windows throughout your pregnancy.</p>
+          <p>Most pregnancies last approximately <strong>40 weeks (280 days)</strong> from the first day of the last menstrual period, or 38 weeks from the date of conception. However only about 5 percent of babies actually arrive on their exact due date. The majority of full-term births occur anywhere from 37 to 42 weeks — so your due date is best understood as the center of a 5-week window rather than a precise deadline.</p>
+          <p>The Body HQ Pregnancy Due Date Calculator offers <strong>three calculation methods</strong> — Last Menstrual Period (LMP), conception date, and IVF transfer date — to give you the most accurate estimate possible based on what you know. It also shows your complete trimester timeline and flags important pregnancy milestones week by week.</p>
+        </div>
+
+        <div className="seo-card">
+          <h2>How the Pregnancy Due Date Calculator Works</h2>
+          <div className="seo-step"><div className="seo-num">1</div><div className="seo-txt"><strong>Choose your calculation method</strong> — select Last Menstrual Period (LMP), Conception Date, or IVF Transfer Date depending on what information you have available.</div></div>
+          <div className="seo-step"><div className="seo-num">2</div><div className="seo-txt"><strong>Enter your date</strong> — input the relevant date for your chosen method. For LMP, enter the first day of your last period. For conception date, enter when you believe conception occurred. For IVF, enter your transfer date and select Day 3 or Day 5 embryo.</div></div>
+          <div className="seo-step"><div className="seo-num">3</div><div className="seo-txt"><strong>Adjust your cycle length</strong> — if your menstrual cycle is not the standard 28 days, use the cycle length slider to get a more accurate due date calculation.</div></div>
+          <div className="seo-step"><div className="seo-num">4</div><div className="seo-txt"><strong>View your results</strong> — see your estimated due date, current gestational age, trimester timeline, and key milestone dates all displayed together.</div></div>
+          <div className="seo-step"><div className="seo-num">5</div><div className="seo-txt"><strong>Note important appointments</strong> — the calculator highlights key windows for your dating scan, anomaly scan, glucose tolerance test, and other prenatal appointments.</div></div>
+        </div>
+
+        <div className="seo-card">
+          <h2>Frequently Asked Questions</h2>
+
+          <div className="seo-faq">
+            <div className="seo-faq-q">How is a due date calculated?</div>
+            <div className="seo-faq-a">The most common method is <strong>Naegele's Rule</strong> — add 280 days (40 weeks) to the first day of your last menstrual period. This assumes a standard 28-day cycle with ovulation on day 14. If your cycle is longer or shorter than 28 days, adjustments are made accordingly. Your doctor or midwife may also use ultrasound measurements in early pregnancy to confirm or adjust your estimated due date.</div>
+          </div>
+
+          <div className="seo-faq">
+            <div className="seo-faq-q">When does each trimester start and end?</div>
+            <div className="seo-faq-a">Pregnancy is divided into three trimesters: <strong>First trimester: Weeks 1 to 12</strong> — the period of most rapid development when major organs form. <strong>Second trimester: Weeks 13 to 26</strong> — often the most comfortable period when energy returns and the baby bump becomes visible. <strong>Third trimester: Weeks 27 to 40+</strong> — the final stage of growth leading up to birth.</div>
+          </div>
+
+          <div className="seo-faq">
+            <div className="seo-faq-q">What is the difference between gestational age and fetal age?</div>
+            <div className="seo-faq-a"><strong>Gestational age</strong> is counted from the first day of your last menstrual period and is the standard used by doctors and midwives. <strong>Fetal age</strong> (or embryonic age) is counted from the date of conception and is typically about 2 weeks less than gestational age. When your doctor says you are 10 weeks pregnant, they mean 10 weeks gestational age — your baby has actually been developing for approximately 8 weeks.</div>
+          </div>
+
+          <div className="seo-faq">
+            <div className="seo-faq-q">How accurate is a due date calculator?</div>
+            <div className="seo-faq-a">Due date calculators provide a <strong>reliable estimate but not a guaranteed date</strong>. Only about 5 percent of babies are born on their exact due date. Most full-term babies arrive within 2 weeks before or after the estimated due date. Early ultrasound scans (before 12 weeks) are the most accurate way to confirm gestational age and adjust the due date estimate if needed.</div>
+          </div>
+
+          <div className="seo-faq">
+            <div className="seo-faq-q">What nutrients are most important during pregnancy?</div>
+            <div className="seo-faq-a">The most critical nutrients during pregnancy include <strong>folate (400-600 mcg daily, ideally started before conception)</strong> to prevent neural tube defects, iron (27 mg daily) to support increased blood volume, iodine for fetal brain development, calcium and Vitamin D for bone development, and Omega-3 DHA for brain and eye development. Use our <a href="/nutrients" style={{color:"#e8628a"}}>Vitamin and Mineral Calculator</a> to see your complete personalized pregnancy nutrient targets.</div>
+          </div>
+
+          <div className="seo-faq">
+            <div className="seo-faq-q">When should I take a pregnancy test?</div>
+            <div className="seo-faq-a">Most home pregnancy tests are accurate from <strong>the first day of a missed period</strong> — typically around 4 weeks gestational age. Some early detection tests can give accurate results a few days before a missed period. Testing too early may give a false negative as hCG levels may not yet be high enough to detect. For the most reliable result, test on the first day of your missed period using first morning urine.</div>
+          </div>
+
+        </div>
+
+        <div className="seo-links">
+          <h3>🌿 Explore More Free Health Tools</h3>
+          <div className="seo-grid">
+            <a href="/nutrients" className="seo-link">
+              <div className="seo-link-name">💊 Vitamin & Mineral Calculator</div>
+              <div className="seo-link-desc">See your personalized pregnancy nutrient targets including folate and iron</div>
+            </a>
+            <a href="/sleep" className="seo-link">
+              <div className="seo-link-name">🌙 Sleep Cycle Calculator</div>
+              <div className="seo-link-desc">Optimize your sleep schedule during pregnancy</div>
+            </a>
+            <a href="/burnout" className="seo-link">
+              <div className="seo-link-name">🧠 Stress & Burnout Score</div>
+              <div className="seo-link-desc">Assess your stress levels with a 12-question assessment</div>
+            </a>
+            <a href="/fasting" className="seo-link">
+              <div className="seo-link-name">⏰ Intermittent Fasting Calculator</div>
+              <div className="seo-link-desc">Learn about fasting — note: not recommended during pregnancy</div>
+            </a>
+          </div>
+        </div>
+
+        <div className="seo-disc">⚕️ <strong>Medical Disclaimer:</strong> This pregnancy due date calculator provides an estimate based on standard obstetric calculations and is for general educational purposes only. It is not a substitute for professional prenatal care. Due dates are estimates — only about 5% of babies arrive on their exact due date. Always consult your obstetrician, midwife, or healthcare provider for personalized pregnancy guidance and to confirm your due date via ultrasound.</div>
+      </div>
+
   );
 }

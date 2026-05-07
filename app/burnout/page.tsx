@@ -112,6 +112,31 @@ const S = () => (
     .disclaimer{background:var(--card2);border-radius:10px;padding:12px 14px;
       font-size:14px;color:var(--muted);line-height:1.6;margin-top:4px}
     @media(max-width:480px){.nav-row{flex-direction:column}.btn-back{flex:1}}
+
+    .seo-wrap{max-width:640px;margin:0 auto;padding:0 16px 48px}
+    .seo-card{background:var(--card);border:1px solid var(--border);border-radius:16px;padding:28px;margin-bottom:20px}
+    .seo-card h2{font-family:'Syne',sans-serif;font-size:22px;font-weight:800;color:var(--text);margin-bottom:14px}
+    .seo-card p{font-size:16px;color:var(--muted);line-height:1.8;margin-bottom:14px}
+    .seo-card p:last-child{margin-bottom:0}
+    .seo-card strong{color:var(--text)}
+    .seo-step{display:flex;gap:14px;margin-bottom:16px;align-items:flex-start}
+    .seo-num{background:#14b8a6;color:#fff;width:28px;height:28px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:14px;font-weight:700;flex-shrink:0;margin-top:2px}
+    .seo-txt{font-size:16px;color:var(--muted);line-height:1.7}
+    .seo-txt strong{color:var(--text)}
+    .seo-faq{border-bottom:1px solid var(--border);padding:16px 0}
+    .seo-faq:last-child{border-bottom:none;padding-bottom:0}
+    .seo-faq-q{font-size:16px;font-weight:700;color:var(--text);margin-bottom:8px}
+    .seo-faq-a{font-size:15px;color:var(--muted);line-height:1.7}
+    .seo-faq-a strong{color:var(--text)}
+    .seo-links{background:rgba(20,184,166,.08);border:1px solid rgba(20,184,166,.25);border-radius:16px;padding:24px;margin-bottom:20px}
+    .seo-links h3{font-family:'Syne',sans-serif;font-size:18px;font-weight:700;color:#14b8a6;margin-bottom:14px}
+    .seo-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:10px}
+    .seo-link{background:var(--card);border:1px solid var(--border);border-radius:10px;padding:12px;text-decoration:none;transition:all .2s;display:block}
+    .seo-link:hover{border-color:#14b8a6}
+    .seo-link-name{font-size:15px;font-weight:600;color:var(--text)}
+    .seo-link-desc{font-size:13px;color:var(--muted);margin-top:3px}
+    .seo-disc{font-size:13px;color:var(--muted);line-height:1.6;padding:16px;background:var(--card);border:1px solid var(--border);border-radius:12px;margin-bottom:20px}
+    @media(max-width:480px){.seo-grid{grid-template-columns:1fr}}
   `}</style>
 );
 
@@ -317,5 +342,83 @@ export default function BurnoutCalc() {
         )}
       </div>
     </div>
+      {/* SEO CONTENT */}
+      <div className="seo-wrap">
+        <div className="seo-card">
+          <h2>What Is a Burnout Assessment?</h2>
+          <p>A burnout assessment is a structured self-evaluation tool that helps you <strong>measure your current level of stress, exhaustion, and burnout</strong> across key areas of your life. Unlike a simple stress quiz, a well-designed burnout assessment examines multiple dimensions — physical symptoms, emotional depletion, cognitive performance, and lifestyle factors — to give you a complete picture of where you stand.</p>
+          <p>Burnout is more than just feeling tired or stressed. According to the World Health Organization, burnout is an occupational phenomenon characterized by <strong>three core dimensions: emotional exhaustion, depersonalization, and reduced sense of personal accomplishment</strong>. It develops gradually through prolonged exposure to chronic stress without adequate recovery and can have serious consequences for both physical and mental health if left unaddressed.</p>
+          <p>The Body HQ Stress and Burnout Score is a <strong>12-question evidence-informed assessment</strong> across four categories — Physical, Emotional, Work and Productivity, and Lifestyle and Recovery. Your results include a detailed breakdown by category, a personalized interpretation of your score, and practical recommendations tailored to your specific situation.</p>
+        </div>
+
+        <div className="seo-card">
+          <h2>How the Stress and Burnout Assessment Works</h2>
+          <div className="seo-step"><div className="seo-num">1</div><div className="seo-txt"><strong>Answer 12 questions honestly</strong> — each question asks about your experiences across the past 2 to 4 weeks. There are no right or wrong answers — the more honest you are the more useful your results will be.</div></div>
+          <div className="seo-step"><div className="seo-num">2</div><div className="seo-txt"><strong>Rate each statement</strong> — choose from five response options ranging from Never to Always. Each response is weighted to give a nuanced picture of your situation.</div></div>
+          <div className="seo-step"><div className="seo-num">3</div><div className="seo-txt"><strong>Complete all four categories</strong> — the assessment covers Physical symptoms, Emotional wellbeing, Work and Productivity, and Lifestyle and Recovery factors.</div></div>
+          <div className="seo-step"><div className="seo-num">4</div><div className="seo-txt"><strong>Review your results</strong> — see your overall burnout score, a breakdown by category showing where you are most affected, and a detailed interpretation of what your score means.</div></div>
+          <div className="seo-step"><div className="seo-num">5</div><div className="seo-txt"><strong>Read your personalized recommendations</strong> — based on your score level you receive specific, actionable steps you can take to reduce stress and begin recovering from burnout.</div></div>
+        </div>
+
+        <div className="seo-card">
+          <h2>Frequently Asked Questions</h2>
+
+          <div className="seo-faq">
+            <div className="seo-faq-q">What are the signs of burnout?</div>
+            <div className="seo-faq-a">The most common signs of burnout include <strong>chronic exhaustion that does not improve with rest</strong>, increased cynicism or detachment from work or relationships, reduced productivity despite working harder, physical symptoms like frequent headaches or illness, difficulty concentrating or making decisions, feeling emotionally numb or disconnected, and a loss of satisfaction from activities you previously enjoyed. Burnout develops gradually — most people do not recognize it until they are already significantly affected.</div>
+          </div>
+
+          <div className="seo-faq">
+            <div className="seo-faq-q">What is the difference between stress and burnout?</div>
+            <div className="seo-faq-a"><strong>Stress is characterized by urgency and over-engagement</strong> — too much pressure, too many demands, but still with the feeling that things could improve. <strong>Burnout is characterized by disengagement and emptiness</strong> — a sense that nothing matters, that you have nothing left to give. Stress feels like drowning in responsibilities. Burnout feels like running completely dry. Both are serious and both deserve attention, but burnout typically requires more significant lifestyle changes to recover from.</div>
+          </div>
+
+          <div className="seo-faq">
+            <div className="seo-faq-q">How long does it take to recover from burnout?</div>
+            <div className="seo-faq-a">Recovery from burnout is highly individual and depends on the severity of burnout and the changes made to address it. <strong>Mild to moderate burnout may improve within a few weeks</strong> with rest, boundary-setting, and lifestyle changes. Severe burnout can take months or even longer and may require professional support such as therapy or medical intervention. The most important factor is addressing the root causes rather than simply resting temporarily and returning to the same conditions.</div>
+          </div>
+
+          <div className="seo-faq">
+            <div className="seo-faq-q">Can burnout cause physical health problems?</div>
+            <div className="seo-faq-a">Yes — burnout has significant physical health consequences. Research has linked chronic burnout to <strong>increased risk of cardiovascular disease, impaired immune function, sleep disorders, gastrointestinal problems, and Type 2 diabetes</strong>. The chronic stress hormones released during prolonged burnout — particularly cortisol — cause measurable damage to the body when elevated for extended periods. Treating burnout is not just about mental health — it is a physical health necessity.</div>
+          </div>
+
+          <div className="seo-faq">
+            <div className="seo-faq-q">When should I seek professional help for burnout?</div>
+            <div className="seo-faq-a">You should seek professional help if your burnout symptoms are <strong>significantly affecting your ability to function</strong> at work or in relationships, if you experience persistent feelings of hopelessness or worthlessness, if you have thoughts of self-harm, or if lifestyle changes alone are not producing improvement after several weeks. A doctor can rule out underlying medical conditions and refer you to appropriate mental health support. Burnout is a legitimate health condition — seeking help is a sign of strength, not weakness.</div>
+          </div>
+
+          <div className="seo-faq">
+            <div className="seo-faq-q">What are the most effective ways to prevent burnout?</div>
+            <div className="seo-faq-a">The most effective burnout prevention strategies include <strong>setting clear boundaries between work and rest time</strong>, prioritizing quality sleep (use our Sleep Calculator to optimize your sleep schedule), regular physical movement, maintaining social connections, practicing regular stress management techniques, taking real breaks and vacations, and addressing workload issues proactively rather than waiting until they become overwhelming. Prevention is significantly easier than recovery.</div>
+          </div>
+
+        </div>
+
+        <div className="seo-links">
+          <h3>🌿 Explore More Free Health Tools</h3>
+          <div className="seo-grid">
+            <a href="/sleep" className="seo-link">
+              <div className="seo-link-name">🌙 Sleep Cycle Calculator</div>
+              <div className="seo-link-desc">Optimize your sleep schedule — critical for stress recovery</div>
+            </a>
+            <a href="/nutrients" className="seo-link">
+              <div className="seo-link-name">💊 Vitamin & Mineral Calculator</div>
+              <div className="seo-link-desc">Nutrition plays a key role in stress resilience and recovery</div>
+            </a>
+            <a href="/fasting" className="seo-link">
+              <div className="seo-link-name">⏰ Intermittent Fasting Calculator</div>
+              <div className="seo-link-desc">Structured eating patterns can support energy and mental clarity</div>
+            </a>
+            <a href="/pregnancy" className="seo-link">
+              <div className="seo-link-name">🤰 Pregnancy Due Date Calculator</div>
+              <div className="seo-link-desc">Calculate your due date and track pregnancy milestones</div>
+            </a>
+          </div>
+        </div>
+
+        <div className="seo-disc">⚕️ <strong>Medical Disclaimer:</strong> This assessment is an educational screening tool only and is not a clinical diagnostic instrument. It is not a substitute for professional mental health assessment or treatment. If you are experiencing symptoms of severe burnout, depression, anxiety, or have any thoughts of self-harm, please contact a qualified mental health professional or call a crisis helpline immediately. In the US, call or text 988 to reach the Suicide and Crisis Lifeline.</div>
+      </div>
+
   );
 }

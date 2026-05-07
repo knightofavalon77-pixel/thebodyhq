@@ -70,6 +70,36 @@ const S = () => (
     .tip-text strong{color:var(--text)}
     .disclaimer{background:var(--card2);border-radius:10px;padding:12px 14px;font-size:14px;color:var(--muted);line-height:1.6;margin-top:16px}
     @media(max-width:400px){.stages-grid{grid-template-columns:1fr}}
+
+    /* SEO CONTENT STYLES */
+    .seo-section{max-width:640px;margin:0 auto;padding:0 16px 48px}
+    .seo-intro{background:var(--card);border:1px solid var(--border);border-radius:16px;padding:28px;margin-bottom:20px}
+    .seo-intro h2{font-family:'Syne',sans-serif;font-size:22px;font-weight:800;color:var(--text);margin-bottom:14px}
+    .seo-intro p{font-size:16px;color:var(--muted);line-height:1.8;margin-bottom:14px}
+    .seo-intro p:last-child{margin-bottom:0}
+    .seo-intro strong{color:var(--text)}
+    .how-it-works{background:var(--card);border:1px solid var(--border);border-radius:16px;padding:28px;margin-bottom:20px}
+    .how-it-works h2{font-family:'Syne',sans-serif;font-size:22px;font-weight:800;color:var(--text);margin-bottom:16px}
+    .step-item{display:flex;gap:14px;margin-bottom:16px;align-items:flex-start}
+    .step-num{background:var(--purple);color:#fff;width:28px;height:28px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:14px;font-weight:700;flex-shrink:0;margin-top:2px}
+    .step-text{font-size:16px;color:var(--muted);line-height:1.7}
+    .step-text strong{color:var(--text)}
+    .faq-section{background:var(--card);border:1px solid var(--border);border-radius:16px;padding:28px;margin-bottom:20px}
+    .faq-section h2{font-family:'Syne',sans-serif;font-size:22px;font-weight:800;color:var(--text);margin-bottom:16px}
+    .faq-item{border-bottom:1px solid var(--border);padding:16px 0}
+    .faq-item:last-child{border-bottom:none;padding-bottom:0}
+    .faq-q{font-size:16px;font-weight:700;color:var(--text);margin-bottom:8px}
+    .faq-a{font-size:15px;color:var(--muted);line-height:1.7}
+    .faq-a strong{color:var(--text)}
+    .internal-links{background:rgba(124,58,237,.08);border:1px solid rgba(124,58,237,.25);border-radius:16px;padding:24px;margin-bottom:20px}
+    .internal-links h3{font-family:'Syne',sans-serif;font-size:18px;font-weight:700;color:var(--purp-lt);margin-bottom:14px}
+    .tool-links{display:grid;grid-template-columns:repeat(2,1fr);gap:10px}
+    .tool-link{background:var(--card);border:1px solid var(--border);border-radius:10px;padding:12px;text-decoration:none;transition:all .2s;display:block}
+    .tool-link:hover{border-color:var(--purple);background:var(--card2)}
+    .tool-link-name{font-size:15px;font-weight:600;color:var(--text)}
+    .tool-link-desc{font-size:13px;color:var(--muted);margin-top:3px}
+    .seo-disclaimer{font-size:13px;color:var(--muted);line-height:1.6;padding:16px;background:var(--card);border:1px solid var(--border);border-radius:12px;margin-bottom:20px}
+    @media(max-width:480px){.tool-links{grid-template-columns:1fr}}
   `}</style>
 );
 
@@ -267,6 +297,87 @@ export default function SleepCalc() {
             <button className="btn btn-reset" onClick={()=>setResults(null)}>← Calculate Again</button>
           </>
         )}
+      </div>
+
+      {/* SEO CONTENT SECTION */}
+      <div className="seo-section">
+
+        <div className="seo-intro">
+          <h2>What Is a Sleep Cycle Calculator?</h2>
+          <p>A sleep cycle calculator helps you figure out the <strong>best time to go to sleep or wake up</strong> so you feel rested and refreshed — not groggy. Instead of just counting how many hours you sleep, it accounts for the natural 90-minute cycles your brain moves through each night.</p>
+          <p>Most people make the mistake of setting an alarm for 8 hours and wondering why they still feel terrible. The reason is simple — if your alarm wakes you up in the <strong>middle of a deep sleep stage</strong>, your brain needs time to recover from that interruption. Waking up at the end of a complete sleep cycle is the difference between jumping out of bed feeling great and hitting snooze five times.</p>
+          <p>The Body HQ Sleep Cycle Calculator takes your target wake-up time or bedtime and calculates the <strong>ideal times to fall asleep or wake up</strong> so you complete full 90-minute cycles. It also accounts for the average 14 minutes it takes most people to actually fall asleep after getting into bed.</p>
+          <p>Whether you are a night owl trying to optimize late nights, an early riser maximizing morning energy, or simply someone who wants to stop waking up exhausted — this free sleep calculator gives you the science-backed times that work best for your body.</p>
+        </div>
+
+        <div className="how-it-works">
+          <h2>How the Sleep Cycle Calculator Works</h2>
+          <div className="step-item"><div className="step-num">1</div><div className="step-text"><strong>Choose your mode</strong> — select "I want to wake up at..." if you have a fixed wake time, or "I want to go to sleep at..." if you have a fixed bedtime.</div></div>
+          <div className="step-item"><div className="step-num">2</div><div className="step-text"><strong>Enter your time</strong> — type in your target wake-up time or the time you plan to get into bed.</div></div>
+          <div className="step-item"><div className="step-num">3</div><div className="step-text"><strong>Get your results</strong> — the calculator shows you multiple ideal sleep or wake times based on completing 4, 5, or 6 full 90-minute sleep cycles. Each option shows how many hours of sleep you will get.</div></div>
+          <div className="step-item"><div className="step-num">4</div><div className="step-text"><strong>Pick the best option for you</strong> — most adults feel best after 5 or 6 complete cycles (7.5 to 9 hours). Choose the time that fits your schedule while maximizing complete cycles.</div></div>
+          <div className="step-item"><div className="step-num">5</div><div className="step-text"><strong>Follow the sleep tips</strong> — scroll down for evidence-based tips on improving your sleep quality, not just your sleep duration.</div></div>
+        </div>
+
+        <div className="faq-section">
+          <h2>Frequently Asked Questions</h2>
+
+          <div className="faq-item">
+            <div className="faq-q">How long is a sleep cycle?</div>
+            <div className="faq-a">A complete sleep cycle lasts approximately <strong>90 minutes</strong>. Each cycle moves through four stages — three stages of non-REM sleep (light sleep and deep sleep) followed by one stage of REM sleep (where dreaming occurs). Most adults complete 4 to 6 full cycles per night, with each cycle becoming progressively more REM-heavy toward morning.</div>
+          </div>
+
+          <div className="faq-item">
+            <div className="faq-q">How many hours of sleep do I actually need?</div>
+            <div className="faq-a">The American Academy of Sleep Medicine recommends <strong>7 to 9 hours per night for adults</strong>. For teenagers the recommendation is 8 to 10 hours, and school-age children need 9 to 12 hours. However individual needs vary — some people genuinely function well on 7 hours while others need 9. The key is waking up at the end of a complete sleep cycle, which is why 7.5 hours (5 cycles) often feels better than 8 hours if 8 hours puts you mid-cycle.</div>
+          </div>
+
+          <div className="faq-item">
+            <div className="faq-q">Why do I wake up tired even after 8 hours of sleep?</div>
+            <div className="faq-a">Waking up groggy after 8 hours is usually caused by one of three things: <strong>waking up mid-cycle</strong> (your alarm interrupted a deep sleep stage), poor sleep quality (you were in bed 8 hours but not actually sleeping well), or an underlying condition like sleep apnea. Try adjusting your alarm to a sleep-cycle-friendly time using this calculator. If the grogginess persists despite optimizing your sleep timing, speak with a doctor.</div>
+          </div>
+
+          <div className="faq-item">
+            <div className="faq-q">What is sleep inertia?</div>
+            <div className="faq-a">Sleep inertia is the groggy, disoriented feeling you get when you are woken up abruptly during deep sleep. It can last anywhere from a few minutes to over an hour and significantly impairs cognitive performance. <strong>Waking up at the end of a sleep cycle</strong> — when you are naturally in lighter sleep — dramatically reduces sleep inertia. This is exactly what this calculator helps you do.</div>
+          </div>
+
+          <div className="faq-item">
+            <div className="faq-q">What is REM sleep and why does it matter?</div>
+            <div className="faq-a">REM (Rapid Eye Movement) sleep is the stage associated with vivid dreaming and is critical for <strong>memory consolidation, emotional regulation, and creative thinking</strong>. REM sleep becomes longer and more frequent in the later cycles of the night — which is why cutting sleep short, even by an hour or two, disproportionately reduces your total REM sleep and leaves you feeling mentally foggy.</div>
+          </div>
+
+          <div className="faq-item">
+            <div className="faq-q">Is this sleep calculator suitable for children?</div>
+            <div className="faq-a">This calculator uses 90-minute sleep cycles which apply to adults and teenagers. <strong>Young children have shorter sleep cycles</strong> (around 50-60 minutes) so the timings will not be as accurate for children under 12. For general sleep duration recommendations for children, consult your pediatrician.</div>
+          </div>
+
+        </div>
+
+        <div className="internal-links">
+          <h3>🌿 Explore More Free Health Tools</h3>
+          <div className="tool-links">
+            <a href="/nutrients" className="tool-link">
+              <div className="tool-link-name">💊 Vitamin & Mineral Calculator</div>
+              <div className="tool-link-desc">Get personalized daily nutrient targets for 40+ vitamins and minerals</div>
+            </a>
+            <a href="/burnout" className="tool-link">
+              <div className="tool-link-name">🧠 Stress & Burnout Score</div>
+              <div className="tool-link-desc">Take a 12-question assessment to understand your stress levels</div>
+            </a>
+            <a href="/fasting" className="tool-link">
+              <div className="tool-link-name">⏰ Intermittent Fasting Calculator</div>
+              <div className="tool-link-desc">Find your ideal fasting and eating windows across 6 protocols</div>
+            </a>
+            <a href="/pregnancy" className="tool-link">
+              <div className="tool-link-name">🤰 Pregnancy Due Date Calculator</div>
+              <div className="tool-link-desc">Calculate your due date using 3 different methods</div>
+            </a>
+          </div>
+        </div>
+
+        <div className="seo-disclaimer">⚕️ <strong>Medical Disclaimer:</strong> The information provided by this sleep cycle calculator is for general educational purposes only and is not a substitute for professional medical advice. If you experience chronic sleep problems, insomnia, excessive daytime sleepiness, or suspect a sleep disorder such as sleep apnea, please consult a qualified healthcare provider or sleep specialist.</div>
+
       </div>
     </div>
   );

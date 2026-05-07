@@ -159,6 +159,31 @@ const S = () => (
     .quiz-result-desc{font-size:15px;color:var(--muted);line-height:1.5}
     .skip-link{font-size:14px;color:var(--muted);text-decoration:underline;cursor:pointer;background:none;border:none;font-family:'DM Sans',sans-serif;margin-top:6px;display:block}
     @media(max-width:480px){.protocol-grid{grid-template-columns:1fr}.clock-wrap{flex-direction:column}.benefits{grid-template-columns:1fr}.stat-row{grid-template-columns:1fr 1fr}}
+
+    .seo-wrap{max-width:640px;margin:0 auto;padding:0 16px 48px}
+    .seo-card{background:var(--card);border:1px solid var(--border);border-radius:16px;padding:28px;margin-bottom:20px}
+    .seo-card h2{font-family:'Syne',sans-serif;font-size:22px;font-weight:800;color:var(--text);margin-bottom:14px}
+    .seo-card p{font-size:16px;color:var(--muted);line-height:1.8;margin-bottom:14px}
+    .seo-card p:last-child{margin-bottom:0}
+    .seo-card strong{color:var(--soft)}
+    .seo-step{display:flex;gap:14px;margin-bottom:16px;align-items:flex-start}
+    .seo-step-num{background:var(--amber);color:#000;width:28px;height:28px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:14px;font-weight:700;flex-shrink:0;margin-top:2px}
+    .seo-step-txt{font-size:16px;color:var(--muted);line-height:1.7}
+    .seo-step-txt strong{color:var(--text)}
+    .seo-faq{border-bottom:1px solid var(--border);padding:16px 0}
+    .seo-faq:last-child{border-bottom:none;padding-bottom:0}
+    .seo-faq-q{font-size:16px;font-weight:700;color:var(--soft);margin-bottom:8px}
+    .seo-faq-a{font-size:15px;color:var(--muted);line-height:1.7}
+    .seo-faq-a strong{color:var(--text)}
+    .seo-links{background:rgba(245,158,11,.08);border:1px solid rgba(245,158,11,.25);border-radius:16px;padding:24px;margin-bottom:20px}
+    .seo-links h3{font-family:'Syne',sans-serif;font-size:18px;font-weight:700;color:var(--amber);margin-bottom:14px}
+    .seo-links-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:10px}
+    .seo-link{background:var(--card);border:1px solid var(--border);border-radius:10px;padding:12px;text-decoration:none;transition:all .2s;display:block}
+    .seo-link:hover{border-color:var(--amber)}
+    .seo-link-name{font-size:15px;font-weight:600;color:var(--text)}
+    .seo-link-desc{font-size:13px;color:var(--muted);margin-top:3px}
+    .seo-disc2{font-size:13px;color:var(--muted);line-height:1.6;padding:16px;background:var(--card);border:1px solid var(--border);border-radius:12px;margin-bottom:20px}
+    @media(max-width:480px){.seo-links-grid{grid-template-columns:1fr}}
   `}</style>
 );
 
@@ -466,5 +491,83 @@ export default function IFCalc() {
         )}
       </div>
     </div>
+      {/* SEO CONTENT */}
+      <div className="seo-wrap">
+        <div className="seo-card">
+          <h2>What Is Intermittent Fasting?</h2>
+          <p>Intermittent fasting (IF) is an eating pattern that <strong>cycles between periods of fasting and eating</strong>. Unlike traditional diets that focus on what you eat, intermittent fasting focuses on when you eat. During fasting windows your body shifts from burning glucose for energy to burning stored fat — a metabolic state that has been linked to weight loss, improved insulin sensitivity, reduced inflammation, and even cellular repair through a process called autophagy.</p>
+          <p>The most popular intermittent fasting protocol is the <strong>16:8 method</strong> — fasting for 16 hours and eating within an 8-hour window. Other popular approaches include 18:6, 20:4, and the more challenging one meal a day (OMAD) protocol. The right protocol depends entirely on your goals, your schedule, and your experience with fasting.</p>
+          <p>The Body HQ Intermittent Fasting Calculator takes your eating window preferences and calculates your <strong>exact fasting start and end times</strong> across 6 different protocols. It also includes a personalized recommendation quiz to help beginners find the right starting point, and important safety guidance for people who should consult a doctor before fasting.</p>
+        </div>
+
+        <div className="seo-card">
+          <h2>How the Fasting Calculator Works</h2>
+          <div className="seo-step"><div className="seo-step-num">1</div><div className="seo-step-txt"><strong>Take the recommendation quiz</strong> — if you are new to fasting, answer 2 quick questions and the calculator will recommend the best protocol for your experience level and goals.</div></div>
+          <div className="seo-step"><div className="seo-step-num">2</div><div className="seo-step-txt"><strong>Choose your protocol</strong> — select from 6 protocols ranging from the gentle 14:10 fast all the way to OMAD (one meal a day). Each protocol shows your fasting and eating hours.</div></div>
+          <div className="seo-step"><div className="seo-step-num">3</div><div className="seo-step-txt"><strong>Set your eating window start time</strong> — enter the time you want to break your fast (your first meal of the day) and the calculator works out everything else.</div></div>
+          <div className="seo-step"><div className="seo-step-num">4</div><div className="seo-step-txt"><strong>Get your schedule</strong> — see your exact fasting window, eating window, and recommended meal times displayed clearly on a visual timeline.</div></div>
+          <div className="seo-step"><div className="seo-step-num">5</div><div className="seo-step-txt"><strong>Read the protocol guide</strong> — each protocol includes a description, difficulty level, and who it is best suited for to help you make the right choice.</div></div>
+        </div>
+
+        <div className="seo-card">
+          <h2>Frequently Asked Questions</h2>
+
+          <div className="seo-faq">
+            <div className="seo-faq-q">Which intermittent fasting protocol is best for weight loss?</div>
+            <div className="seo-faq-a">The <strong>16:8 protocol is the most studied and most effective for sustainable weight loss</strong> for most people. It creates a calorie deficit by limiting eating to an 8-hour window while remaining practical enough to maintain long term. More restrictive protocols like 18:6 or 20:4 may produce faster results but are harder to sustain. The best protocol is always the one you can stick to consistently.</div>
+          </div>
+
+          <div className="seo-faq">
+            <div className="seo-faq-q">Can I drink coffee or tea while fasting?</div>
+            <div className="seo-faq-a"><strong>Black coffee and plain tea do not break a fast</strong> and are generally considered acceptable during fasting windows. They contain minimal to no calories and may even enhance the fat-burning effects of fasting. However adding milk, cream, sugar, or sweeteners does break a fast. Plain water, sparkling water, and black coffee or tea are your best options during fasting hours.</div>
+          </div>
+
+          <div className="seo-faq">
+            <div className="seo-faq-q">Is intermittent fasting safe for diabetics?</div>
+            <div className="seo-faq-a">Intermittent fasting can be <strong>dangerous for people with diabetes without medical supervision</strong>. Fasting can cause blood sugar levels to drop dangerously low (hypoglycemia), especially for people taking insulin or certain oral diabetes medications. If you have Type 1 or Type 2 diabetes, you must consult your doctor before attempting any fasting protocol. Your medication timing may need to be adjusted alongside any changes to your eating schedule.</div>
+          </div>
+
+          <div className="seo-faq">
+            <div className="seo-faq-q">What is autophagy and when does it start during fasting?</div>
+            <div className="seo-faq-a">Autophagy is a cellular cleaning process where your body breaks down and recycles damaged cell components. Research suggests autophagy begins to increase <strong>after approximately 16 to 18 hours of fasting</strong>, which is one reason many people choose the 16:8 or 18:6 protocols. However the exact timing varies between individuals based on factors like metabolic health, activity level, and what was eaten before the fast began.</div>
+          </div>
+
+          <div className="seo-faq">
+            <div className="seo-faq-q">Will intermittent fasting cause muscle loss?</div>
+            <div className="seo-faq-a">When done correctly, intermittent fasting should <strong>not cause significant muscle loss</strong>. The key is consuming adequate protein during your eating window — aim for 0.7 to 1 gram of protein per pound of body weight — and continuing resistance training. In fact some studies suggest that fasting combined with resistance training can improve body composition by reducing fat while preserving or even building muscle.</div>
+          </div>
+
+          <div className="seo-faq">
+            <div className="seo-faq-q">What should I eat when breaking my fast?</div>
+            <div className="seo-faq-a">Breaking your fast with <strong>easily digestible whole foods</strong> is ideal. Good options include eggs, Greek yogurt, fruits, vegetables, lean proteins, and whole grains. Avoid breaking your fast with large amounts of processed food, refined sugars, or very high-fat meals — your digestive system is more sensitive after a fasting period and blood sugar spikes are more pronounced. Start with something moderate and give your body 30 minutes before eating a larger meal.</div>
+          </div>
+
+        </div>
+
+        <div className="seo-links">
+          <h3>🌿 Explore More Free Health Tools</h3>
+          <div className="seo-links-grid">
+            <a href="/nutrients" className="seo-link">
+              <div className="seo-link-name">💊 Vitamin & Mineral Calculator</div>
+              <div className="seo-link-desc">Get personalized daily nutrient targets for 40+ vitamins and minerals</div>
+            </a>
+            <a href="/sleep" className="seo-link">
+              <div className="seo-link-name">🌙 Sleep Cycle Calculator</div>
+              <div className="seo-link-desc">Find your perfect bedtime based on 90-minute sleep cycles</div>
+            </a>
+            <a href="/burnout" className="seo-link">
+              <div className="seo-link-name">🧠 Stress & Burnout Score</div>
+              <div className="seo-link-desc">12-question assessment to understand your stress levels</div>
+            </a>
+            <a href="/pregnancy" className="seo-link">
+              <div className="seo-link-name">🤰 Pregnancy Due Date Calculator</div>
+              <div className="seo-link-desc">Calculate your due date using 3 different methods</div>
+            </a>
+          </div>
+        </div>
+
+        <div className="seo-disc2">⚕️ <strong>Medical Disclaimer:</strong> Intermittent fasting is not suitable for everyone. Do not attempt any fasting protocol if you are pregnant, breastfeeding, have a history of eating disorders, take regular medication, have diabetes, or have any chronic health condition without first consulting your doctor. This calculator is for general educational purposes only and is not a substitute for professional medical advice.</div>
+      </div>
+
   );
 }
