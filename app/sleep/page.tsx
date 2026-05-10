@@ -382,10 +382,6 @@ export default function SleepCalc() {
         <div className="internal-links">
           <h3>🌿 Explore More Free Health Tools</h3>
           <div className="tool-links">
-            <a href="/nutrients" className="tool-link">
-              <div className="tool-link-name">💊 Optimal Daily Nutrient Intake<br/><span style={{paddingLeft:'26px'}}>Calculator</span></div>
-              <div className="tool-link-desc">Get personalized daily nutrient targets for 40+ vitamins and minerals</div>
-            </a>
             <a href="/burnout" className="tool-link">
               <div className="tool-link-name">🧠 Stress & Burnout Score</div>
               <div className="tool-link-desc">Take a 12-question assessment to understand your stress levels</div>
@@ -394,9 +390,13 @@ export default function SleepCalc() {
               <div className="tool-link-name">⏰ Intermittent Fasting Calculator</div>
               <div className="tool-link-desc">Find your ideal fasting and eating windows across 6 protocols</div>
             </a>
-            <a href="/pregnancy" className="tool-link">
-              <div className="tool-link-name">🤰 Pregnancy Due Date<br/><span style={{paddingLeft:'26px'}}>Calculator</span></div>
-              <div className="tool-link-desc">Calculate your due date using 3 different methods</div>
+            <a href="/nutrients" className="tool-link">
+              <div className="tool-link-name">💊 Optimal Daily Nutrient Intake<br/><span style={{paddingLeft:'26px'}}>Calculator</span></div>
+              <div className="tool-link-desc">Get personalized daily nutrient targets for 40+ vitamins and minerals</div>
+            </a>
+            <a href="/bmi" className="tool-link">
+              <div className="tool-link-name">📏 BMI Calculator</div>
+              <div className="tool-link-desc">Calculate your BMI, Ponderal Index, and get ethnicity-adjusted results</div>
             </a>
           </div>
         </div>
