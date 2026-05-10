@@ -109,14 +109,12 @@ export default function Contact() {
         <div className="nav-links">
           {TOOLS.map(t => <a key={t.id} href={`/${t.id}`} className="nav-link">{t.icon} {t.name}</a>)}
           <a href="/bmi" className="nav-link"><img src="/bmi-icon.png" style={{width:'16px',height:'16px',objectFit:'contain',display:'inline-block',verticalAlign:'middle'}} /> BMI Calculator</a>
-          <a href="/about" className="nav-link">About</a>
         </div>
         <button className="nav-menu-btn" onClick={() => setMenuOpen(!menuOpen)}>{menuOpen ? "✕" : "☰"}</button>
       </nav>
       <div className={`mobile-menu${menuOpen ? " open" : ""}`}>
         {TOOLS.map(t => <a key={t.id} href={`/${t.id}`} className="mobile-link" onClick={() => setMenuOpen(false)}>{t.icon} {t.name}</a>)}
         <a href="/bmi" className="mobile-link" onClick={() => setMenuOpen(false)}><img src="/bmi-icon.png" style={{width:'18px',height:'18px',objectFit:'contain',display:'inline-block',verticalAlign:'middle'}} /> BMI Calculator</a>
-        <a href="/about" className="mobile-link" onClick={() => setMenuOpen(false)}>About</a>
       </div>
 
       <div className="hero">
