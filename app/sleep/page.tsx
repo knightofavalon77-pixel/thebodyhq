@@ -395,7 +395,7 @@ export default function SleepCalc() {
               <div className="tool-link-desc">Get personalized daily nutrient targets for 40+ vitamins and minerals</div>
             </a>
             <a href="/bmi" className="tool-link">
-              <div className="tool-link-name">📏 BMI Calculator</div>
+              <div className="tool-link-name"><img src="/bmi-icon.png" style={{width:'18px',height:'18px',objectFit:'contain',display:'inline-block',verticalAlign:'middle'}} /> BMI Calculator</div>
               <div className="tool-link-desc">Calculate your BMI, Ponderal Index, and get ethnicity-adjusted results</div>
             </a>
           </div>
