@@ -225,7 +225,15 @@ export default function IFCalc() {
 
       {/* NAV BAR — Intermittent Fasting excluded (current page) */}
       <nav className="navbar">
-        <a href="/" className="nav-logo">⚡ The Body HQ</a>
+        <a href="/" className="nav-logo">
+          <div style={{width:'32px',height:'20px'}}>
+            <svg viewBox="0 0 32 20" fill="none" xmlns="http://www.w3.org/2000/svg" style={{width:'100%',height:'100%'}}>
+              <defs><linearGradient id="pg" x1="0" y1="0" x2="32" y2="0" gradientUnits="userSpaceOnUse"><stop offset="0%" stopColor="#7c3aed"/><stop offset="100%" stopColor="#38bdf8"/></linearGradient></defs>
+              <polyline points="0,10 8,10 10,4 12,16 14,8 16,12 18,10 32,10" stroke="url(#pg)" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" fill="none"/>
+            </svg>
+          </div>
+          <span style={{fontFamily:"'Syne',sans-serif",fontSize:'17px',fontWeight:800,background:'linear-gradient(135deg,#a78bfa,#38bdf8)',WebkitBackgroundClip:'text',WebkitTextFillColor:'transparent'}}>The Body HQ</span>
+        </a>
         <div className="nav-links">
           <a href="/sleep" className="nav-link">🌙 Sleep Cycle</a>
           <a href="/nutrients" className="nav-link">💊 Vitamin &amp; Mineral</a>
