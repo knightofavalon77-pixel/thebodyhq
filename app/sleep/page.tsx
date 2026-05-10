@@ -10,6 +10,17 @@ const S = () => (
     :root{--bg:#09090f;--card:#13131f;--card2:#1a1a2e;--purple:#7c3aed;--purp-lt:#a78bfa;--blue:#3b82f6;--cyan:#06b6d4;--green:#10b981;--yellow:#f59e0b;--red:#ef4444;--text:#f1f5f9;--muted:#94a3b8;--border:#1e293b}
     body{background:var(--bg);color:var(--text);font-family:'Space Grotesk',sans-serif;min-height:100vh}
     .app{min-height:100vh;display:flex;flex-direction:column}
+
+    /* NAV BAR */
+    .navbar{background:var(--card);border-bottom:1px solid var(--border);padding:0 20px;height:52px;display:flex;align-items:center;justify-content:space-between;position:sticky;top:0;z-index:100}
+    .nav-logo{display:flex;align-items:center;gap:8px;text-decoration:none}
+    .nav-logo-icon{font-size:20px}
+    .nav-logo-text{font-family:'Syne',sans-serif;font-size:17px;font-weight:800;background:linear-gradient(135deg,var(--purp-lt),var(--cyan));-webkit-background-clip:text;-webkit-text-fill-color:transparent}
+    .nav-links{display:flex;align-items:center;gap:4px;overflow-x:auto;scrollbar-width:none}
+    .nav-links::-webkit-scrollbar{display:none}
+    .nav-link{display:flex;align-items:center;gap:5px;padding:6px 10px;border-radius:8px;text-decoration:none;font-size:13px;font-weight:600;color:var(--muted);white-space:nowrap;transition:all .2s;font-family:'Space Grotesk',sans-serif}
+    .nav-link:hover{background:rgba(124,58,237,.15);color:var(--purp-lt)}
+
     /* stars bg */
     .hero{background:var(--card);padding:40px 20px 32px;text-align:center;position:relative;overflow:hidden;border-bottom:1px solid var(--border)}
     .stars{position:absolute;inset:0;background:radial-gradient(ellipse at 20% 50%,rgba(124,58,237,.15) 0%,transparent 60%),radial-gradient(ellipse at 80% 20%,rgba(59,130,246,.1) 0%,transparent 50%)}
@@ -164,14 +175,12 @@ export default function SleepCalc() {
     const cycles = [3, 4, 5, 6];
     let times;
     if (mode === "wake") {
-      // I want to wake at X — when should I go to bed?
       times = cycles.map(c => {
         const sleepMins = c * 90 + SLEEP_ONSET;
         const bedtime = addMinutes(time, -sleepMins);
         return { cycles: c, bedtime, waketime: time, hrs: (c * 90 / 60).toFixed(1) };
       });
     } else {
-      // I'm going to bed at X — when should I wake?
       times = cycles.map(c => {
         const sleepMins = c * 90 + SLEEP_ONSET;
         const wake = addMinutes(time, sleepMins);
@@ -187,6 +196,22 @@ export default function SleepCalc() {
   return (
     <div className="app">
       <S />
+
+      {/* NAV BAR — Sleep Cycle excluded (current page) */}
+      <nav className="navbar">
+        <a href="/" className="nav-logo">
+          <span className="nav-logo-icon">⚡</span>
+          <span className="nav-logo-text">The Body HQ</span>
+        </a>
+        <div className="nav-links">
+          <a href="/nutrients" className="nav-link">💊 Optimal Nutrients</a>
+          <a href="/fasting" className="nav-link">⏰ Intermittent Fasting</a>
+          <a href="/pregnancy" className="nav-link">🤰 Pregnancy Due Date</a>
+          <a href="/burnout" className="nav-link">🧠 Stress &amp; Burnout</a>
+          <a href="/bmi" className="nav-link">📏 BMI Calculator</a>
+        </div>
+      </nav>
+
       <div className="hero">
         <div className="stars" />
         <span className="moon">🌙</span>
