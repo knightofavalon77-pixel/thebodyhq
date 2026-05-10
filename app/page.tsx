@@ -4,7 +4,7 @@ import { useState, useEffect } from "react";
 
 const S = () => (
   <style>{`
-    @import url('https://fonts.googleapis.com/css2?family=Syne:wght@700;800&family=DM+Sans:wght@300;400;500;600&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Syne:wght@700;800&display=swap');
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
     :root {
@@ -22,7 +22,7 @@ const S = () => (
     }
 
     html { scroll-behavior: smooth; }
-    body { background: var(--bg); color: var(--white); font-family: 'DM Sans', sans-serif; min-height: 100vh; }
+    body { background: var(--bg); color: var(--white); font-family: 'Space Grotesk', sans-serif; min-height: 100vh; }
 
     /* ── NAV ── */
     nav {
@@ -120,7 +120,7 @@ const S = () => (
     .hero-cta {
       display: inline-flex; align-items: center; gap: 10px;
       background: linear-gradient(135deg, var(--purple), #5b21b6);
-      color: #fff; font-family: 'DM Sans', sans-serif;
+      color: #fff; font-family: 'Space Grotesk', sans-serif;
       font-size: 16px; font-weight: 700;
       padding: 14px 32px; border-radius: 12px; border: none;
       cursor: pointer; text-decoration: none;
@@ -217,7 +217,7 @@ const S = () => (
     .tool-card-btn {
       display: flex; align-items: center; justify-content: space-between;
       padding: 11px 16px; border-radius: 10px;
-      font-family: 'DM Sans', sans-serif; font-size: 14px; font-weight: 600;
+      font-family: 'Space Grotesk', sans-serif; font-size: 14px; font-weight: 600;
       border: 1px solid var(--border); background: var(--card2);
       color: var(--white); cursor: pointer; transition: all .2s;
       text-decoration: none;
@@ -315,8 +315,8 @@ const TOOLS = [
   {
     id: "nutrients",
     icon: "💊",
-    navLabel: "Vitamin & Mineral",
-    name: "Vitamin & Mineral Calculator",
+    navLabel: "Optimal Nutrients",
+    name: "Optimal Nutrients Calculator",
     desc: "Get personalized daily targets for 40+ essential nutrients based on your age, sex, diet and lifestyle.",
     tags: [{ label: "40+ Nutrients", color: "#10b981", bg: "rgba(16,185,129,.12)" }, { label: "NIH Data", color: "#38bdf8", bg: "rgba(56,189,248,.12)" }],
     featured: false,
@@ -359,6 +359,16 @@ const TOOLS = [
     name: "BMI Calculator",
     desc: "Calculate your Body Mass Index, understand what it means, see your healthy weight range, and get honest personalized guidance.",
     tags: [{ label: "Ethnicity Adjusted", color: "#3b82f6", bg: "rgba(59,130,246,.12)" }, { label: "Ponderal Index", color: "#6366f1", bg: "rgba(99,102,241,.12)" }],
+    featured: false,
+    badge: "New",
+  },
+  {
+    id: "ovulation",
+    icon: "🌸",
+    navLabel: "Ovulation Calculator",
+    name: "Ovulation Calculator",
+    desc: "Find your fertile window and peak ovulation day across 3 months. Plan your cycle with a color-coded calendar showing fertile days in coral and your peak day in gold.",
+    tags: [{ label: "3 Month Forecast", color: "#EF9F27", bg: "rgba(239,159,39,.12)" }, { label: "Peak Day Highlighted", color: "#D85A30", bg: "rgba(216,90,48,.12)" }],
     featured: false,
     badge: "New",
   },
@@ -435,7 +445,7 @@ export default function Homepage() {
         </div>
         <div className="hero-stats">
           <div className="hero-stat">
-            <div className="hero-stat-num">6</div>
+            <div className="hero-stat-num">7</div>
             <div className="hero-stat-label">Free Tools</div>
           </div>
           <div className="hero-divider" />
@@ -477,7 +487,7 @@ export default function Homepage() {
       <section className="tools-section" id="tools">
         <div className="section-label">Our Tools</div>
         <h2 className="section-title">Everything Your Body Needs to Know</h2>
-        <p className="section-sub">Six free science-backed calculators covering sleep, nutrition, BMI, fasting, pregnancy and mental wellness.</p>
+        <p className="section-sub">Seven free science-backed calculators covering sleep, nutrition, BMI, fasting, ovulation, pregnancy and mental wellness.</p>
 
         <div className="tools-grid">
           {TOOLS.map(tool => (
