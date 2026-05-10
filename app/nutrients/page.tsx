@@ -315,10 +315,12 @@ export default function App(){
         </a>
       <div className="nav-links">
         <a href="/sleep" className="nav-link">🌙 Sleep Cycle</a>
+          <a href="/ovulation" className="nav-link">🌸 Ovulation Calculator</a>
         <a href="/fasting" className="nav-link">⏰ Intermittent Fasting</a>
         <a href="/pregnancy" className="nav-link">🤰 Pregnancy Due Date</a>
         <a href="/burnout" className="nav-link">🧠 Stress &amp; Burnout</a>
-        <a href="/bmi" className="nav-link"><img src="/bmi-icon.png" style={{width:'18px',height:'18px',objectFit:'contain',display:'inline-block',verticalAlign:'middle'}} /> BMI Calculator</a>
+        
+          <a href="/bmi" className="nav-link"><img src="/bmi-icon.png" style={{width:'18px',height:'18px',objectFit:'contain',display:'inline-block',verticalAlign:'middle'}} /> BMI Calculator</a>
       </div>
     </nav>
 

@@ -222,9 +222,11 @@ export default function PregnancyCalc() {
         </a>
         <div className="nav-links">
           <a href="/sleep" className="nav-link">🌙 Sleep Cycle</a>
+          <a href="/ovulation" className="nav-link">🌸 Ovulation Calculator</a>
           <a href="/nutrients" className="nav-link">💊 Vitamin &amp; Mineral</a>
           <a href="/fasting" className="nav-link">⏰ Intermittent Fasting</a>
           <a href="/burnout" className="nav-link">🧠 Stress &amp; Burnout</a>
+          
           <a href="/bmi" className="nav-link"><img src="/bmi-icon.png" style={{width:'16px',height:'16px',objectFit:'contain',display:'inline-block',verticalAlign:'middle'}} /> BMI Calculator</a>
         </div>
       </nav>

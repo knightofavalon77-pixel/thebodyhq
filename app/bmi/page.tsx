@@ -193,6 +193,7 @@ export default function App() {
         </a>
         <div className="nav-links">
           <a href="/sleep" className="nav-link">🌙 Sleep Cycle</a>
+          <a href="/ovulation" className="nav-link">🌸 Ovulation Calculator</a>
           <a href="/nutrients" className="nav-link">💊 Vitamin & Mineral</a>
           <a href="/fasting" className="nav-link">⏰ Intermittent Fasting</a>
           <a href="/pregnancy" className="nav-link">🤰 Pregnancy Due Date</a>
