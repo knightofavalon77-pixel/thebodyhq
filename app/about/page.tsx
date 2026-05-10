@@ -5,7 +5,7 @@ import { useState } from "react";
 
 const S = () => (
   <style>{`
-    @import url('https://fonts.googleapis.com/css2?family=Syne:wght@700;800&family=DM+Sans:wght@300;400;500;600&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Syne:wght@700;800&display=swap');
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
     :root {
       --bg:#13131f; --card:#1a1a2e; --card2:#1e1e3a; --border:#2a2a45;
@@ -13,7 +13,7 @@ const S = () => (
       --white:#f8fafc; --muted:#94a3b8; --dim:#64748b;
     }
     html { scroll-behavior: smooth; }
-    body { background: var(--bg); color: var(--white); font-family: 'DM Sans', sans-serif; min-height: 100vh; }
+    body { background: var(--bg); color: var(--white); font-family: 'Space Grotesk', sans-serif; min-height: 100vh; }
     nav {
       position: sticky; top: 0; z-index: 100;
       background: rgba(19,19,31,.92); backdrop-filter: blur(16px);
@@ -27,14 +27,15 @@ const S = () => (
       -webkit-background-clip: text; -webkit-text-fill-color: transparent; text-decoration: none;
     }
     .nav-pulse { width: 32px; height: 20px; }
-    .nav-links { display: flex; gap: 6px; align-items: center; }
+    .nav-links { display: flex; gap: 4px; align-items: center; overflow-x: auto; scrollbar-width: none; }
+    .nav-links::-webkit-scrollbar { display: none; }
     .nav-link {
-      padding: 7px 14px; border-radius: 8px; text-decoration: none;
-      font-size: 14px; font-weight: 500; color: var(--muted);
-      transition: all .2s; border: 1px solid transparent;
+      padding: 6px 10px; border-radius: 8px; text-decoration: none;
+      font-size: 13px; font-weight: 600; color: var(--muted);
+      transition: all .2s; white-space: nowrap; font-family: 'Space Grotesk', sans-serif;
     }
-    .nav-link:hover { color: var(--white); background: var(--card2); border-color: var(--border); }
-    .nav-link.active { color: var(--white); background: var(--card2); border-color: var(--border); }
+    .nav-link:hover { color: var(--white); background: var(--card2); }
+    .nav-link.active { color: var(--white); background: var(--card2); border: 1px solid var(--border); }
     .nav-menu-btn { display: none; background: none; border: none; color: var(--white); font-size: 22px; cursor: pointer; }
     .mobile-menu {
       display: none; position: fixed; inset: 64px 0 0;
@@ -43,9 +44,9 @@ const S = () => (
     }
     .mobile-menu.open { display: flex; }
     .mobile-link {
-      font-size: 20px; font-weight: 600; color: var(--white); text-decoration: none;
-      padding: 12px 32px; border-radius: 12px; border: 1px solid var(--border);
-      width: 260px; text-align: center; transition: all .2s;
+      font-size: 18px; font-weight: 600; color: var(--white); text-decoration: none;
+      padding: 12px 28px; border-radius: 12px; border: 1px solid var(--border);
+      width: 260px; text-align: center; transition: all .2s; font-family: 'Space Grotesk', sans-serif;
     }
     .mobile-link:hover { background: var(--card2); border-color: var(--purple); }
     .hero {
@@ -80,39 +81,26 @@ const S = () => (
       font-family: 'Syne', sans-serif; font-size: clamp(20px, 3vw, 28px);
       font-weight: 800; margin-bottom: 16px; color: var(--white);
     }
-    .section p {
-      font-size: 16px; color: var(--muted); line-height: 1.8; margin-bottom: 16px;
-    }
+    .section p { font-size: 16px; color: var(--muted); line-height: 1.8; margin-bottom: 16px; }
     .section p strong { color: var(--white); }
     .values-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; margin-top: 24px; }
-    .value-card {
-      background: var(--card); border: 1px solid var(--border);
-      border-radius: 14px; padding: 22px;
-    }
+    .value-card { background: var(--card); border: 1px solid var(--border); border-radius: 14px; padding: 22px; }
     .value-icon { font-size: 28px; margin-bottom: 12px; display: block; }
     .value-title { font-family: 'Syne', sans-serif; font-size: 16px; font-weight: 700; color: var(--white); margin-bottom: 8px; }
     .value-desc { font-size: 14px; color: var(--muted); line-height: 1.7; }
     .sources-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 12px; margin-top: 20px; }
-    .source-card {
-      background: var(--card); border: 1px solid var(--border);
-      border-radius: 12px; padding: 16px 18px;
-      display: flex; align-items: flex-start; gap: 12px;
-    }
+    .source-card { background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 16px 18px; display: flex; align-items: flex-start; gap: 12px; }
     .source-icon { font-size: 20px; flex-shrink: 0; margin-top: 2px; }
     .source-name { font-size: 14px; font-weight: 700; color: var(--white); margin-bottom: 3px; }
     .source-desc { font-size: 13px; color: var(--muted); line-height: 1.5; }
     .disclaimer-box {
       background: rgba(124,58,237,.08); border: 1px solid rgba(124,58,237,.25);
-      border-left: 4px solid var(--purple); border-radius: 12px;
-      padding: 20px 22px; margin-top: 24px;
+      border-left: 4px solid var(--purple); border-radius: 12px; padding: 20px 22px; margin-top: 24px;
     }
     .disclaimer-box p { font-size: 15px; color: var(--muted); line-height: 1.7; margin: 0; }
     .disclaimer-box strong { color: var(--purp-lt); }
     .divider { border: none; border-top: 1px solid var(--border); margin: 48px 0; }
-    footer {
-      border-top: 1px solid var(--border); padding: 40px 24px;
-      max-width: 1100px; margin: 0 auto;
-    }
+    footer { border-top: 1px solid var(--border); padding: 40px 24px; max-width: 1100px; margin: 0 auto; }
     .footer-top { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 32px; margin-bottom: 32px; }
     .footer-brand { font-family: 'Syne', sans-serif; font-size: 20px; font-weight: 800; background: linear-gradient(135deg, var(--purp-lt), var(--cyan)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; margin-bottom: 8px; }
     .footer-tagline { font-size: 13px; color: var(--dim); max-width: 280px; line-height: 1.6; }
@@ -134,11 +122,11 @@ const S = () => (
 );
 
 const TOOLS = [
-  { id: "sleep", icon: "🌙", name: "Sleep" },
-  { id: "nutrients", icon: "💊", name: "Nutrients" },
-  { id: "fasting", icon: "⏰", name: "Fasting" },
-  { id: "pregnancy", icon: "🤰", name: "Pregnancy" },
-  { id: "burnout", icon: "🧠", name: "Burnout" },
+  { id: "sleep",     icon: "🌙", name: "Sleep Cycle" },
+  { id: "nutrients", icon: "💊", name: "Vitamin & Mineral" },
+  { id: "fasting",   icon: "⏰", name: "Intermittent Fasting" },
+  { id: "pregnancy", icon: "🤰", name: "Pregnancy Due Date" },
+  { id: "burnout",   icon: "🧠", name: "Stress & Burnout" },
 ];
 
 export default function About() {
@@ -158,12 +146,14 @@ export default function About() {
         </a>
         <div className="nav-links">
           {TOOLS.map(t => <a key={t.id} href={`/${t.id}`} className="nav-link">{t.icon} {t.name}</a>)}
+          <a href="/bmi" className="nav-link"><img src="/bmi-icon.png" style={{width:'16px',height:'16px',objectFit:'contain',display:'inline-block',verticalAlign:'middle'}} /> BMI Calculator</a>
           <a href="/about" className="nav-link active">About</a>
         </div>
         <button className="nav-menu-btn" onClick={() => setMenuOpen(!menuOpen)}>{menuOpen ? "✕" : "☰"}</button>
       </nav>
       <div className={`mobile-menu${menuOpen ? " open" : ""}`}>
         {TOOLS.map(t => <a key={t.id} href={`/${t.id}`} className="mobile-link" onClick={() => setMenuOpen(false)}>{t.icon} {t.name}</a>)}
+        <a href="/bmi" className="mobile-link" onClick={() => setMenuOpen(false)}><img src="/bmi-icon.png" style={{width:'18px',height:'18px',objectFit:'contain',display:'inline-block',verticalAlign:'middle'}} /> BMI Calculator</a>
         <a href="/about" className="mobile-link" onClick={() => setMenuOpen(false)}>About</a>
       </div>
 
@@ -255,6 +245,7 @@ export default function About() {
           <div className="footer-links">
             <div className="footer-links-title">Tools</div>
             {TOOLS.map(t => <a key={t.id} href={`/${t.id}`} className="footer-link">{t.icon} {t.name} Calculator</a>)}
+            <a href="/bmi" className="footer-link"><img src="/bmi-icon.png" style={{width:'16px',height:'16px',objectFit:'contain',display:'inline-block',verticalAlign:'middle'}} /> BMI Calculator</a>
           </div>
           <div className="footer-links">
             <div className="footer-links-title">Site</div>
