@@ -366,44 +366,46 @@ export default function App() {
               <button className="btn-reset" onClick={() => setResults(null)}>← Calculate Again</button>
             </div>
 
-            <div className="seo-section">
-              <div className="seo-card">
-                <h2>What Is a BMI Calculator?</h2>
-                <p>A BMI calculator measures your <strong>Body Mass Index</strong> — a number calculated from your height and weight that gives a general indication of whether you are underweight, at a healthy weight, overweight, or obese. It is one of the most widely used health screening tools in the world because it is free, instant, and requires no specialist equipment.</p>
-                <p>The Body HQ BMI Calculator goes beyond a simple number. It includes <strong>ethnicity-adjusted thresholds</strong>, waist circumference risk assessment, the Ponderal Index as an alternative measure, obesity class breakdown, personalized health risk information, and practical next steps based on your result — all completely free.</p>
-                <p>BMI was developed in the 1830s by Belgian mathematician Adolphe Quetelet and has been used as a population health tool for decades. Despite its age and known limitations, it remains the starting point for most weight-related health conversations between patients and their doctors.</p>
-              </div>
-              <div className="seo-card">
-                <h2>How the BMI Calculator Works</h2>
-                <div className="how-step"><div className="how-num">1</div><div className="how-txt"><strong>Choose your measurement unit</strong> — select Imperial (feet, inches, pounds) or Metric (centimeters, kilograms) depending on what you're comfortable with.</div></div>
-                <div className="how-step"><div className="how-num">2</div><div className="how-txt"><strong>Enter your height and weight</strong> — these are the only two required fields. Everything else is optional but improves the accuracy and personalization of your results.</div></div>
-                <div className="how-step"><div className="how-num">3</div><div className="how-txt"><strong>Add optional details</strong> — your sex, ethnic background, and waist circumference allow the calculator to give you adjusted thresholds and a waist risk assessment alongside your BMI.</div></div>
-                <div className="how-step"><div className="how-num">4</div><div className="how-txt"><strong>Review your results</strong> — see your BMI number, category, healthy weight range, obesity class if applicable, Ponderal Index, and waist circumference risk all in one place.</div></div>
-                <div className="how-step"><div className="how-num">5</div><div className="how-txt"><strong>Read your personalized next steps</strong> — based on your result you receive specific, actionable guidance tailored to your BMI category along with links to other tools that support your health goals.</div></div>
-              </div>
-              <div className="seo-card">
-                <h2>Frequently Asked Questions</h2>
-                <div className="faq-item"><div className="faq-q">What is a healthy BMI for adults?</div><div className="faq-a">For most adults a BMI between <strong>18.5 and 24.9</strong> is considered a healthy weight. Below 18.5 is underweight, 25 to 29.9 is overweight, and 30 or above is obese. However these thresholds are adjusted for people of Asian descent — overweight begins at 23 and obese at 27.5 due to evidence that health risks appear at lower BMI levels in this population.</div></div>
-                <div className="faq-item"><div className="faq-q">Is BMI accurate for athletes and muscular people?</div><div className="faq-a">No — BMI is one of its least accurate for athletes and highly muscular individuals. Because muscle weighs more than fat, a very muscular person can have a <strong>high BMI while having very low body fat</strong>. This is a well-known limitation of BMI and why it should always be used alongside other measures like waist circumference and body fat percentage.</div></div>
-                <div className="faq-item"><div className="faq-q">How is BMI calculated?</div><div className="faq-a">BMI is calculated by dividing your weight in kilograms by your height in meters squared: <strong>BMI = kg ÷ m²</strong>. For imperial measurements the formula is: weight in pounds multiplied by 703, then divided by height in inches squared. This calculator handles all the math — just enter your details and click Calculate.</div></div>
-                <div className="faq-item"><div className="faq-q">What is the Ponderal Index and how is it different from BMI?</div><div className="faq-a">BMI divides weight by height squared (kg/m²). The Ponderal Index divides weight by height <strong>cubed</strong> (kg/m³). This makes it more accurate for people who are very tall or very short — where BMI tends to overestimate fatness in taller people and underestimate it in shorter people. A healthy Ponderal Index falls between 11 and 14. Both numbers are shown in your results so you can compare them.</div></div>
-                <div className="faq-item"><div className="faq-q">Why does ethnicity affect BMI interpretation?</div><div className="faq-a">Research shows that people of Asian descent develop obesity-related health risks — including Type 2 diabetes and cardiovascular disease — at <strong>lower BMI levels than people of European descent</strong>. International health guidance recommends lower thresholds for Asian populations — overweight at 23 and obese at 27.5 rather than the standard 25 and 30. This is why our calculator offers ethnicity-adjusted results.</div></div>
-                <div className="faq-item"><div className="faq-q">What does waist circumference tell me that BMI doesn't?</div><div className="faq-a">Waist circumference measures <strong>abdominal visceral fat</strong> — the fat stored around your organs that is far more dangerous than fat stored under the skin elsewhere. Two people can have the same BMI but very different waist sizes and health risks. For men a waist over 102cm (40 inches) indicates high risk. For women the threshold is 88cm (35 inches). Adding your waist measurement gives you a much more complete picture of your health.</div></div>
-                <div className="faq-item"><div className="faq-q">Can I use this BMI calculator if I have diabetes?</div><div className="faq-a">Yes — this calculator is safe to use with any health condition. However if you have Type 2 diabetes, your weight management goals and safe ranges may differ from standard BMI recommendations. <strong>Always consult your doctor or a registered dietitian</strong> before making changes to your diet or exercise routine based on your BMI result. BMI is a screening tool, not a medical diagnosis.</div></div>
-              </div>
-              <div className="int-box">
-                <h3>🌿 Explore More Free Health Tools</h3>
-                <div className="tools-grid">
-                  <a href="/nutrients" className="tl"><div className="tl-name">💊 Vitamin & Mineral Calculator</div><div className="tl-desc">40+ personalized daily nutrient targets</div></a>
-                  <a href="/fasting" className="tl"><div className="tl-name">⏰ Intermittent Fasting Calculator</div><div className="tl-desc">Find your ideal fasting protocol</div></a>
-                  <a href="/sleep" className="tl"><div className="tl-name">🌙 Sleep Cycle Calculator</div><div className="tl-desc">Perfect bedtime based on 90-minute cycles</div></a>
-                  <a href="/burnout" className="tl"><div className="tl-name">🧠 Stress & Burnout Score</div><div className="tl-desc">12-question stress and burnout assessment</div></a>
-                </div>
-              </div>
-              <div className="disclaimer">⚕️ <strong>Medical Disclaimer:</strong> The information provided by this BMI calculator is for general educational purposes only and is not a substitute for professional medical advice, diagnosis, or treatment. BMI is a screening tool and should be interpreted alongside other health indicators. Always consult a qualified healthcare provider with questions about your weight or overall health.</div>
-            </div>
           </>
         )}
+      </div>
+
+      {/* SEO SECTION — always visible */}
+      <div className="seo-section" style={{maxWidth:'660px',margin:'0 auto',padding:'0 16px 48px'}}>
+        <div className="seo-card">
+          <h2>What Is a BMI Calculator?</h2>
+          <p>A BMI calculator measures your <strong>Body Mass Index</strong> — a number calculated from your height and weight that gives a general indication of whether you are underweight, at a healthy weight, overweight, or obese. It is one of the most widely used health screening tools in the world because it is free, instant, and requires no specialist equipment.</p>
+          <p>The Body HQ BMI Calculator goes beyond a simple number. It includes <strong>ethnicity-adjusted thresholds</strong>, waist circumference risk assessment, the Ponderal Index as an alternative measure, obesity class breakdown, personalized health risk information, and practical next steps based on your result — all completely free.</p>
+          <p>BMI was developed in the 1830s by Belgian mathematician Adolphe Quetelet and has been used as a population health tool for decades. Despite its age and known limitations, it remains the starting point for most weight-related health conversations between patients and their doctors.</p>
+        </div>
+        <div className="seo-card">
+          <h2>How the BMI Calculator Works</h2>
+          <div className="how-step"><div className="how-num">1</div><div className="how-txt"><strong>Choose your measurement unit</strong> — select Imperial (feet, inches, pounds) or Metric (centimeters, kilograms) depending on what you're comfortable with.</div></div>
+          <div className="how-step"><div className="how-num">2</div><div className="how-txt"><strong>Enter your height and weight</strong> — these are the only two required fields. Everything else is optional but improves the accuracy and personalization of your results.</div></div>
+          <div className="how-step"><div className="how-num">3</div><div className="how-txt"><strong>Add optional details</strong> — your sex, ethnic background, and waist circumference allow the calculator to give you adjusted thresholds and a waist risk assessment alongside your BMI.</div></div>
+          <div className="how-step"><div className="how-num">4</div><div className="how-txt"><strong>Review your results</strong> — see your BMI number, category, healthy weight range, obesity class if applicable, Ponderal Index, and waist circumference risk all in one place.</div></div>
+          <div className="how-step"><div className="how-num">5</div><div className="how-txt"><strong>Read your personalized next steps</strong> — based on your result you receive specific, actionable guidance tailored to your BMI category along with links to other tools that support your health goals.</div></div>
+        </div>
+        <div className="seo-card">
+          <h2>Frequently Asked Questions</h2>
+          <div className="faq-item"><div className="faq-q">What is a healthy BMI for adults?</div><div className="faq-a">For most adults a BMI between <strong>18.5 and 24.9</strong> is considered a healthy weight. Below 18.5 is underweight, 25 to 29.9 is overweight, and 30 or above is obese. However these thresholds are adjusted for people of Asian descent — overweight begins at 23 and obese at 27.5 due to evidence that health risks appear at lower BMI levels in this population.</div></div>
+          <div className="faq-item"><div className="faq-q">Is BMI accurate for athletes and muscular people?</div><div className="faq-a">No — BMI is one of its least accurate for athletes and highly muscular individuals. Because muscle weighs more than fat, a very muscular person can have a <strong>high BMI while having very low body fat</strong>. This is a well-known limitation of BMI and why it should always be used alongside other measures like waist circumference and body fat percentage.</div></div>
+          <div className="faq-item"><div className="faq-q">How is BMI calculated?</div><div className="faq-a">BMI is calculated by dividing your weight in kilograms by your height in meters squared: <strong>BMI = kg ÷ m²</strong>. For imperial measurements the formula is: weight in pounds multiplied by 703, then divided by height in inches squared. This calculator handles all the math — just enter your details and click Calculate.</div></div>
+          <div className="faq-item"><div className="faq-q">What is the Ponderal Index and how is it different from BMI?</div><div className="faq-a">BMI divides weight by height squared (kg/m²). The Ponderal Index divides weight by height <strong>cubed</strong> (kg/m³). This makes it more accurate for people who are very tall or very short — where BMI tends to overestimate fatness in taller people and underestimate it in shorter people. A healthy Ponderal Index falls between 11 and 14. Both numbers are shown in your results so you can compare them.</div></div>
+          <div className="faq-item"><div className="faq-q">Why does ethnicity affect BMI interpretation?</div><div className="faq-a">Research shows that people of Asian descent develop obesity-related health risks — including Type 2 diabetes and cardiovascular disease — at <strong>lower BMI levels than people of European descent</strong>. International health guidance recommends lower thresholds for Asian populations — overweight at 23 and obese at 27.5 rather than the standard 25 and 30. This is why our calculator offers ethnicity-adjusted results.</div></div>
+          <div className="faq-item"><div className="faq-q">What does waist circumference tell me that BMI doesn't?</div><div className="faq-a">Waist circumference measures <strong>abdominal visceral fat</strong> — the fat stored around your organs that is far more dangerous than fat stored under the skin elsewhere. Two people can have the same BMI but very different waist sizes and health risks. For men a waist over 102cm (40 inches) indicates high risk. For women the threshold is 88cm (35 inches). Adding your waist measurement gives you a much more complete picture of your health.</div></div>
+          <div className="faq-item"><div className="faq-q">Can I use this BMI calculator if I have diabetes?</div><div className="faq-a">Yes — this calculator is safe to use with any health condition. However if you have Type 2 diabetes, your weight management goals and safe ranges may differ from standard BMI recommendations. <strong>Always consult your doctor or a registered dietitian</strong> before making changes to your diet or exercise routine based on your BMI result. BMI is a screening tool, not a medical diagnosis.</div></div>
+        </div>
+        <div className="int-box">
+          <h3>🌿 Explore More Free Health Tools</h3>
+          <div className="tools-grid">
+            <a href="/nutrients" className="tl"><div className="tl-name">💊 Vitamin & Mineral Calculator</div><div className="tl-desc">40+ personalized daily nutrient targets</div></a>
+            <a href="/fasting" className="tl"><div className="tl-name">⏰ Intermittent Fasting Calculator</div><div className="tl-desc">Find your ideal fasting protocol</div></a>
+            <a href="/sleep" className="tl"><div className="tl-name">🌙 Sleep Cycle Calculator</div><div className="tl-desc">Perfect bedtime based on 90-minute cycles</div></a>
+            <a href="/burnout" className="tl"><div className="tl-name">🧠 Stress & Burnout Score</div><div className="tl-desc">12-question stress and burnout assessment</div></a>
+          </div>
+        </div>
+        <div className="disclaimer">⚕️ <strong>Medical Disclaimer:</strong> The information provided by this BMI calculator is for general educational purposes only and is not a substitute for professional medical advice, diagnosis, or treatment. BMI is a screening tool and should be interpreted alongside other health indicators. Always consult a qualified healthcare provider with questions about your weight or overall health.</div>
       </div>
     </div>
   );
