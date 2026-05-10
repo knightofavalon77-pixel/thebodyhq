@@ -383,7 +383,7 @@ export default function SleepCalc() {
           <h3>🌿 Explore More Free Health Tools</h3>
           <div className="tool-links">
             <a href="/nutrients" className="tool-link">
-              <div className="tool-link-name">💊 Optimal Daily Nutrient Intake Calculator</div>
+              <div className="tool-link-name">💊 Optimal Daily Nutrient Intake<br/><span style={{paddingLeft:'26px'}}>Calculator</span></div>
               <div className="tool-link-desc">Get personalized daily nutrient targets for 40+ vitamins and minerals</div>
             </a>
             <a href="/burnout" className="tool-link">
@@ -395,7 +395,7 @@ export default function SleepCalc() {
               <div className="tool-link-desc">Find your ideal fasting and eating windows across 6 protocols</div>
             </a>
             <a href="/pregnancy" className="tool-link">
-              <div className="tool-link-name">🤰 Pregnancy Due Date Calculator</div>
+              <div className="tool-link-name">🤰 Pregnancy Due Date<br/><span style={{paddingLeft:'26px'}}>Calculator</span></div>
               <div className="tool-link-desc">Calculate your due date using 3 different methods</div>
             </a>
           </div>
