@@ -204,7 +204,7 @@ export default function SleepCalc() {
           <span className="nav-logo-text">The Body HQ</span>
         </a>
         <div className="nav-links">
-          <a href="/nutrients" className="nav-link">💊 Optimal Nutrients</a>
+          <a href="/nutrients" className="nav-link">💊 Vitamin & Mineral</a>
           <a href="/fasting" className="nav-link">⏰ Intermittent Fasting</a>
           <a href="/pregnancy" className="nav-link">🤰 Pregnancy Due Date</a>
           <a href="/burnout" className="nav-link">🧠 Stress &amp; Burnout</a>
