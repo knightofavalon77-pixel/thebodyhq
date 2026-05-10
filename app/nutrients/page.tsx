@@ -5,16 +5,27 @@ import React, { useState } from "react";
 
 const FontLink = () => (
   <style>{`
-    @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400&family=DM+Sans:wght@300;400;500;600&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Syne:wght@700;800&display=swap');
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
     :root {
-      --deep:#152e1e; --forest:#1f5c3a; --mid:#2d8653; --mint:#52b788;
-      --light:#a8dabc; --cream:#fdf8f0; --parch:#f5ede0; --gold:#c9922a;
-      --gold-lt:#f7e6c4; --ink:#1e2620; --muted:#6b7c72; --warn:#c0392b;
-      --warn-lt:#fdecea;
+      --deep:#152e1e; --forest:#2d8653; --mid:#52b788; --mint:#52b788;
+      --light:#a8dabc; --cream:#13131f; --parch:#1a1a2e; --gold:#f59e0b;
+      --gold-lt:#292010; --ink:#f1f5f9; --muted:#94a3b8; --warn:#f87171;
+      --warn-lt:#2d1515;
     }
-    body { background:var(--cream); font-family:'DM Sans',sans-serif; color:var(--ink); }
+    body { background:#09090f; font-family:'Space Grotesk',sans-serif; color:var(--ink); }
     .app { min-height:100vh; }
+
+    /* NAV BAR */
+    .navbar{background:#13131f;border-bottom:1px solid #1e293b;padding:0 20px;height:52px;display:flex;align-items:center;justify-content:space-between;position:sticky;top:0;z-index:100}
+    .nav-logo{display:flex;align-items:center;gap:8px;text-decoration:none}
+    .nav-logo-icon{font-size:20px}
+    .nav-logo-text{font-family:'Syne',sans-serif;font-size:17px;font-weight:800;background:linear-gradient(135deg,#a78bfa,#06b6d4);-webkit-background-clip:text;-webkit-text-fill-color:transparent}
+    .nav-links{display:flex;align-items:center;gap:4px;overflow-x:auto;scrollbar-width:none}
+    .nav-links::-webkit-scrollbar{display:none}
+    .nav-link{display:flex;align-items:center;gap:5px;padding:6px 10px;border-radius:8px;text-decoration:none;font-size:13px;font-weight:600;color:#94a3b8;white-space:nowrap;transition:all .2s;font-family:'Space Grotesk',sans-serif}
+    .nav-link:hover{background:rgba(124,58,237,.15);color:#a78bfa}
+
     .hero {
       background:linear-gradient(135deg,var(--deep) 0%,var(--forest) 60%,var(--mid) 100%);
       padding:40px 24px 36px; text-align:center; position:relative; overflow:hidden;
@@ -24,7 +35,7 @@ const FontLink = () => (
       background:url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23ffffff' fill-opacity='0.03'%3E%3Ccircle cx='30' cy='30' r='10'/%3E%3C/g%3E%3C/svg%3E");
     }
     .hero-leaf { font-size:36px; display:block; margin-bottom:10px; position:relative; }
-    .hero h1 { font-family:'Cormorant Garamond',serif; font-size:clamp(22px,4vw,38px); font-weight:700; color:#fff; line-height:1.15; position:relative; }
+    .hero h1 { font-family:'Syne',sans-serif; font-size:clamp(22px,4vw,38px); font-weight:800; color:#fff; line-height:1.15; position:relative; }
     .hero-sub { font-size:16px; color:var(--light); margin-top:8px; font-weight:300; position:relative; }
     .hero-badges { display:flex; gap:6px; justify-content:center; flex-wrap:wrap; margin-top:14px; position:relative; }
     .badge { background:rgba(255,255,255,.12); border:1px solid rgba(255,255,255,.2); color:var(--light); font-size:16px; padding:3px 10px; border-radius:20px; font-weight:500; }
@@ -38,24 +49,24 @@ const FontLink = () => (
     .step-labels { display:flex; justify-content:space-between; max-width:420px; margin:5px auto 0; padding:0 4px; }
     .step-label { font-size:16px; color:var(--muted); font-weight:500; text-align:center; width:56px; }
     .step-label.active { color:var(--gold); font-weight:600; }
-    .card { background:#fff; border-radius:14px; box-shadow:0 2px 20px rgba(0,0,0,.07); max-width:520px; margin:20px auto; padding:24px 20px; }
-    .card-title { font-family:'Cormorant Garamond',serif; font-size:20px; font-weight:700; color:var(--deep); margin-bottom:3px; }
+    .card { background:#13131f; border:1px solid #1e293b; border-radius:14px; box-shadow:0 2px 20px rgba(0,0,0,.3); max-width:520px; margin:20px auto; padding:24px 20px; }
+    .card-title { font-family:'Syne',sans-serif; font-size:20px; font-weight:700; color:var(--ink); margin-bottom:3px; }
     .card-sub { font-size:15px; color:var(--muted); margin-bottom:18px; }
     .field { margin-bottom:16px; }
-    label { display:block; font-size:14px; font-weight:600; color:var(--forest); letter-spacing:0.6px; text-transform:uppercase; margin-bottom:6px; }
-    select, input[type=number] { width:100%; padding:10px 13px; border:1.5px solid #dde8e2; border-radius:9px; font-family:'DM Sans',sans-serif; font-size:16px; color:var(--ink); background:var(--cream); transition:border-color .2s; appearance:none; }
+    label { display:block; font-size:14px; font-weight:600; color:var(--mint); letter-spacing:0.6px; text-transform:uppercase; margin-bottom:6px; }
+    select, input[type=number] { width:100%; padding:10px 13px; border:1.5px solid #1e293b; border-radius:9px; font-family:'Space Grotesk',sans-serif; font-size:16px; color:var(--ink); background:#1a1a2e; transition:border-color .2s; appearance:none; }
     select:focus, input:focus { outline:none; border-color:var(--mint); box-shadow:0 0 0 3px rgba(82,183,136,.15); }
     .select-wrap { position:relative; }
     .select-wrap::after { content:'▾'; position:absolute; right:13px; top:50%; transform:translateY(-50%); color:var(--muted); pointer-events:none; font-size:14px; }
     .pill-group { display:flex; gap:7px; flex-wrap:wrap; }
-    .pill { padding:7px 16px; border-radius:22px; border:2px solid #b8d4c4; font-size:15px; font-weight:600; cursor:pointer; transition:all .2s; background:#fff; color:var(--forest); user-select:none; font-family:'DM Sans',sans-serif; }
-    .pill:hover { border-color:var(--mint); background:var(--parch); }
+    .pill { padding:7px 16px; border-radius:22px; border:2px solid #1e293b; font-size:15px; font-weight:600; cursor:pointer; transition:all .2s; background:#1a1a2e; color:var(--muted); user-select:none; font-family:'Space Grotesk',sans-serif; }
+    .pill:hover { border-color:var(--mint); color:var(--mint); }
     .pill.sel { background:#d4edda; border:2px solid #52b788; color:#1a5c38; font-weight:700; }
-    .unit-toggle { display:inline-flex; border:2px solid #b8d4c4; border-radius:10px; overflow:hidden; background:#fff; margin-bottom:10px; }
-    .unit-btn { padding:9px 22px; border:none; border-right:2px solid #b8d4c4; font-family:'DM Sans',sans-serif; font-size:16px; font-weight:600; cursor:pointer; background:#ffffff; color:#6b7c72; transition:all .2s; }
+    .unit-toggle { display:inline-flex; border:2px solid #1e293b; border-radius:10px; overflow:hidden; background:#1a1a2e; margin-bottom:10px; }
+    .unit-btn { padding:9px 22px; border:none; border-right:2px solid #1e293b; font-family:'Space Grotesk',sans-serif; font-size:16px; font-weight:600; cursor:pointer; background:#1a1a2e; color:var(--muted); transition:all .2s; }
     .unit-btn.active { background:#d4edda; border-left:2px solid #52b788; color:#1a5c38; font-weight:700; }
     .btn-row { display:flex; gap:10px; justify-content:flex-end; margin-top:20px; }
-    .btn { padding:11px 24px; border-radius:9px; font-family:'DM Sans',sans-serif; font-size:16px; font-weight:600; cursor:pointer; border:none; transition:all .2s; }
+    .btn { padding:11px 24px; border-radius:9px; font-family:'Space Grotesk',sans-serif; font-size:16px; font-weight:600; cursor:pointer; border:none; transition:all .2s; }
     .btn-back { background:var(--parch); color:var(--muted); }
     .btn-back:hover { background:#ede3d1; }
     .btn-next { background:linear-gradient(135deg,var(--forest),var(--mid)); color:#fff; box-shadow:0 4px 14px rgba(31,92,58,.3); }
@@ -65,7 +76,7 @@ const FontLink = () => (
     .btn-reset { background:var(--parch); color:var(--muted); font-size:15px; padding:9px 18px; }
     .results-wrap { max-width:760px; margin:0 auto; padding:0 14px 40px; }
     .results-hero { background:linear-gradient(135deg,var(--deep),var(--forest)); border-radius:14px; padding:20px; margin-bottom:20px; color:#fff; margin-top:20px; }
-    .results-hero h2 { font-family:'Cormorant Garamond',serif; font-size:22px; font-weight:700; margin-bottom:3px; }
+    .results-hero h2 { font-family:'Syne',sans-serif; font-size:22px; font-weight:800; margin-bottom:3px; }
     .results-hero p { font-size:15px; color:var(--light); margin-bottom:12px; }
     .profile-chips { display:flex; gap:6px; flex-wrap:wrap; }
     .profile-chip { background:rgba(255,255,255,.15); border:1px solid rgba(255,255,255,.2); color:#fff; font-size:16px; padding:4px 10px; border-radius:18px; font-weight:500; }
@@ -77,54 +88,54 @@ const FontLink = () => (
     .cat-section { margin-bottom:16px; }
     .cat-header { display:flex; align-items:center; gap:8px; padding:11px 14px; border-radius:9px 9px 0 0; cursor:pointer; user-select:none; }
     .cat-icon { font-size:16px; }
-    .cat-title { font-family:'Cormorant Garamond',serif; font-size:16px; font-weight:700; color:#fff; flex:1; }
+    .cat-title { font-family:'Syne',sans-serif; font-size:16px; font-weight:700; color:#fff; flex:1; }
     .cat-count { font-size:16px; color:rgba(255,255,255,.75); font-weight:500; }
     .cat-chevron { color:rgba(255,255,255,.8); font-size:16px; transition:transform .3s; }
     .cat-chevron.open { transform:rotate(180deg); }
-    .cat-body { background:#fff; border:1px solid #e8f0eb; border-top:none; border-radius:0 0 9px 9px; overflow:hidden; }
-    .col-hdr { display:grid; grid-template-columns:1fr 100px 90px; padding:6px 14px; background:#f7faf8; border-bottom:1px solid #e8f0eb; }
+    .cat-body { background:#13131f; border:1px solid #1e293b; border-top:none; border-radius:0 0 9px 9px; overflow:hidden; }
+    .col-hdr { display:grid; grid-template-columns:1fr 100px 90px; padding:6px 14px; background:#1a1a2e; border-bottom:1px solid #1e293b; }
     .col-hdr span { font-size:15px; font-weight:700; color:var(--muted); text-transform:uppercase; letter-spacing:0.6px; }
     .col-hdr span:nth-child(2) { text-align:right; }
     .col-hdr span:nth-child(3) { text-align:center; }
-    .nut-row { display:grid; grid-template-columns:1fr 100px 90px; align-items:center; padding:9px 14px; border-bottom:1px solid #f0f4f1; gap:6px; transition:background .15s; }
+    .nut-row { display:grid; grid-template-columns:1fr 100px 90px; align-items:center; padding:9px 14px; border-bottom:1px solid #1e293b; gap:6px; transition:background .15s; }
     .nut-row:last-child { border-bottom:none; }
-    .nut-row:hover { background:var(--cream); }
-    .nut-name { font-size:15px; font-weight:600; color:var(--deep); }
+    .nut-row:hover { background:#1a1a2e; }
+    .nut-name { font-size:15px; font-weight:600; color:var(--ink); }
     .nut-func { font-size:16px; color:var(--muted); margin-top:2px; line-height:1.4; }
     .nut-note { font-size:15px; color:var(--muted); font-style:italic; margin-top:2px; }
-    .nut-amount { font-size:16px; font-weight:700; color:var(--forest); text-align:right; line-height:1.3; }
+    .nut-amount { font-size:16px; font-weight:700; color:var(--mint); text-align:right; line-height:1.3; }
     .nut-unit { font-size:15px; font-weight:400; color:var(--muted); }
-    .nut-source { font-size:15px; color:var(--muted); background:var(--parch); padding:3px 7px; border-radius:7px; text-align:center; line-height:1.4; }
+    .nut-source { font-size:15px; color:var(--muted); background:#1a1a2e; padding:3px 7px; border-radius:7px; text-align:center; line-height:1.4; }
     .risk-nut .nut-name { color:var(--warn); }
-    .disclaimer { background:var(--parch); border-radius:11px; padding:14px 16px; margin:20px 0; font-size:14px; color:var(--muted); line-height:1.6; }
-    
+    .disclaimer { background:#1a1a2e; border-radius:11px; padding:14px 16px; margin:20px 0; font-size:14px; color:var(--muted); line-height:1.6; }
+
     .seo-section{max-width:740px;margin:0 auto;padding:0 12px 48px}
-    .seo-intro{background:var(--card);border:1px solid #e8f0eb;border-radius:16px;padding:28px;margin-bottom:20px}
-    .seo-intro h2{font-family:'Cormorant Garamond',serif;font-size:24px;font-weight:700;color:var(--deep);margin-bottom:14px}
+    .seo-intro{background:#13131f;border:1px solid #1e293b;border-radius:16px;padding:28px;margin-bottom:20px}
+    .seo-intro h2{font-family:'Syne',sans-serif;font-size:24px;font-weight:800;color:var(--ink);margin-bottom:14px}
     .seo-intro p{font-size:16px;color:var(--muted);line-height:1.8;margin-bottom:14px}
     .seo-intro p:last-child{margin-bottom:0}
-    .seo-intro strong{color:var(--deep)}
-    .how-works{background:var(--card);border:1px solid #e8f0eb;border-radius:16px;padding:28px;margin-bottom:20px}
-    .how-works h2{font-family:'Cormorant Garamond',serif;font-size:24px;font-weight:700;color:var(--deep);margin-bottom:16px}
+    .seo-intro strong{color:var(--ink)}
+    .how-works{background:#13131f;border:1px solid #1e293b;border-radius:16px;padding:28px;margin-bottom:20px}
+    .how-works h2{font-family:'Syne',sans-serif;font-size:24px;font-weight:800;color:var(--ink);margin-bottom:16px}
     .step-row{display:flex;gap:14px;margin-bottom:16px;align-items:flex-start}
-    .step-num{background:var(--forest);color:#fff;width:28px;height:28px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:14px;font-weight:700;flex-shrink:0;margin-top:2px}
+    .step-num{background:var(--mid);color:#fff;width:28px;height:28px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:14px;font-weight:700;flex-shrink:0;margin-top:2px}
     .step-txt{font-size:16px;color:var(--muted);line-height:1.7}
-    .step-txt strong{color:var(--deep)}
-    .faq-wrap{background:var(--card);border:1px solid #e8f0eb;border-radius:16px;padding:28px;margin-bottom:20px}
-    .faq-wrap h2{font-family:'Cormorant Garamond',serif;font-size:24px;font-weight:700;color:var(--deep);margin-bottom:16px}
-    .faq-row{border-bottom:1px solid #e8f0eb;padding:16px 0}
+    .step-txt strong{color:var(--ink)}
+    .faq-wrap{background:#13131f;border:1px solid #1e293b;border-radius:16px;padding:28px;margin-bottom:20px}
+    .faq-wrap h2{font-family:'Syne',sans-serif;font-size:24px;font-weight:800;color:var(--ink);margin-bottom:16px}
+    .faq-row{border-bottom:1px solid #1e293b;padding:16px 0}
     .faq-row:last-child{border-bottom:none;padding-bottom:0}
-    .faq-q{font-size:16px;font-weight:700;color:var(--deep);margin-bottom:8px}
+    .faq-q{font-size:16px;font-weight:700;color:var(--ink);margin-bottom:8px}
     .faq-a{font-size:15px;color:var(--muted);line-height:1.7}
-    .faq-a strong{color:var(--deep)}
-    .int-links{background:rgba(31,92,58,.08);border:1px solid rgba(31,92,58,.25);border-radius:16px;padding:24px;margin-bottom:20px}
-    .int-links h3{font-family:'Cormorant Garamond',serif;font-size:20px;font-weight:700;color:var(--forest);margin-bottom:14px}
+    .faq-a strong{color:var(--ink)}
+    .int-links{background:rgba(52,183,136,.08);border:1px solid rgba(52,183,136,.25);border-radius:16px;padding:24px;margin-bottom:20px}
+    .int-links h3{font-family:'Syne',sans-serif;font-size:20px;font-weight:700;color:var(--mint);margin-bottom:14px}
     .links-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:10px}
-    .int-link{background:#fff;border:1px solid #e8f0eb;border-radius:10px;padding:12px;text-decoration:none;transition:all .2s;display:block}
+    .int-link{background:#13131f;border:1px solid #1e293b;border-radius:10px;padding:12px;text-decoration:none;transition:all .2s;display:block}
     .int-link:hover{border-color:var(--mint)}
-    .int-link-name{font-size:15px;font-weight:600;color:var(--deep)}
+    .int-link-name{font-size:15px;font-weight:600;color:var(--ink)}
     .int-link-desc{font-size:13px;color:var(--muted);margin-top:3px}
-    .seo-disc{font-size:13px;color:var(--muted);line-height:1.6;padding:16px;background:var(--card);border:1px solid #e8f0eb;border-radius:12px;margin-bottom:20px}
+    .seo-disc{font-size:13px;color:var(--muted);line-height:1.6;padding:16px;background:#13131f;border:1px solid #1e293b;border-radius:12px;margin-bottom:20px}
     @media(max-width:480px){.links-grid{grid-template-columns:1fr}}
 
     @media(max-width:480px){
@@ -290,6 +301,22 @@ export default function App(){
 
   return(<div className="app">
     <FontLink/>
+
+    {/* NAV BAR — Optimal Nutrients excluded (current page) */}
+    <nav className="navbar">
+      <a href="/" className="nav-logo">
+        <span className="nav-logo-icon">⚡</span>
+        <span className="nav-logo-text">The Body HQ</span>
+      </a>
+      <div className="nav-links">
+        <a href="/sleep" className="nav-link">🌙 Sleep Cycle</a>
+        <a href="/fasting" className="nav-link">⏰ Intermittent Fasting</a>
+        <a href="/pregnancy" className="nav-link">🤰 Pregnancy Due Date</a>
+        <a href="/burnout" className="nav-link">🧠 Stress &amp; Burnout</a>
+        <a href="/bmi" className="nav-link"><img src="/bmi-icon.png" style={{width:'18px',height:'18px',objectFit:'contain',display:'inline-block',verticalAlign:'middle'}} /> BMI Calculator</a>
+      </div>
+    </nav>
+
     <div className="hero">
       <span className="hero-leaf">🌿</span>
       <h1>Optimal Daily Nutrient<br/>Intake Calculator</h1>
@@ -398,7 +425,7 @@ export default function App(){
       {/* SEO CONTENT */}
       <div className="seo-section">
         <div className="seo-intro">
-          <h2>What Is a Vitamin and Mineral Calculator?</h2>
+          <h2>What Is an Optimal Daily Nutrient Intake Calculator?</h2>
           <p>A vitamin and mineral calculator gives you <strong>personalized daily nutrient targets</strong> based on your specific age, sex, body weight, diet type, and life stage. Instead of generic one-size-fits-all recommendations, you get numbers that are actually relevant to your body and your lifestyle.</p>
           <p>Most people have no idea how much Vitamin D, magnesium, iron, or Omega-3 they actually need. The reality is that <strong>nutrient needs vary dramatically</strong> between a 25-year-old male athlete, a 55-year-old postmenopausal woman, and a pregnant vegan. What is enough for one person may be dangerously deficient for another.</p>
           <p>The Body HQ Nutrient Calculator covers <strong>40+ essential vitamins, minerals, and beneficial compounds</strong> sourced from the National Academies of Sciences and the NIH Office of Dietary Supplements — the gold standard for dietary guidance in the United States.</p>
@@ -423,10 +450,22 @@ export default function App(){
         <div className="int-links">
           <h3>🌿 Explore More Free Health Tools</h3>
           <div className="links-grid">
-            <a href="/sleep" className="int-link"><div className="int-link-name">🌙 Sleep Cycle Calculator</div><div className="int-link-desc">Find your perfect bedtime based on 90-minute sleep cycles</div></a>
-            <a href="/fasting" className="int-link"><div className="int-link-name">⏰ Intermittent Fasting Calculator</div><div className="int-link-desc">Find your ideal fasting and eating windows across 6 protocols</div></a>
-            <a href="/burnout" className="int-link"><div className="int-link-name">🧠 Stress and Burnout Score</div><div className="int-link-desc">12-question assessment to understand your stress levels</div></a>
-            <a href="/pregnancy" className="int-link"><div className="int-link-name">🤰 Pregnancy Due Date Calculator</div><div className="int-link-desc">Calculate your due date using 3 different methods</div></a>
+            <a href="/bmi" className="int-link">
+              <div className="int-link-name"><img src="/bmi-icon.png" style={{width:'18px',height:'18px',objectFit:'contain',display:'inline-block',verticalAlign:'middle'}} /> BMI Calculator</div>
+              <div className="int-link-desc">Calculate your BMI, Ponderal Index, and get ethnicity-adjusted results</div>
+            </a>
+            <a href="/fasting" className="int-link">
+              <div className="int-link-name">⏰ Intermittent Fasting Calculator</div>
+              <div className="int-link-desc">Find your ideal fasting and eating windows across 6 protocols</div>
+            </a>
+            <a href="/sleep" className="int-link">
+              <div className="int-link-name">🌙 Sleep Cycle Calculator</div>
+              <div className="int-link-desc">Find your perfect bedtime based on 90-minute sleep cycles</div>
+            </a>
+            <a href="/burnout" className="int-link">
+              <div className="int-link-name">🧠 Stress &amp; Burnout Score</div>
+              <div className="int-link-desc">12-question assessment to understand your stress levels</div>
+            </a>
           </div>
         </div>
         <div className="seo-disc">⚕️ <strong>Medical Disclaimer:</strong> This calculator provides general educational information based on Dietary Reference Intakes published by the National Academies of Sciences, Engineering, and Medicine. Individual nutrient needs vary. This is not a substitute for professional medical advice. Always consult a registered dietitian or physician before making significant dietary changes or starting any supplement regimen.</div>
