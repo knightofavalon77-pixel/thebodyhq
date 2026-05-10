@@ -84,6 +84,7 @@ export default function Terms() {
         </a>
         <div className="nav-links">
           {TOOLS.map(t => <a key={t.id} href={`/${t.id}`} className="nav-link">{t.icon} {t.name}</a>)}
+          <a href="/ovulation" className="nav-link">🌸 Ovulation Calculator</a>
           <a href="/bmi" className="nav-link"><img src="/bmi-icon.png" style={{width:'16px',height:'16px',objectFit:'contain',display:'inline-block',verticalAlign:'middle'}} /> BMI Calculator</a>
         </div>
         <button className="nav-menu-btn" onClick={() => setMenuOpen(!menuOpen)}>{menuOpen ? "✕" : "☰"}</button>
@@ -183,7 +184,8 @@ export default function Terms() {
           <div className="footer-links">
             <div className="footer-links-title">Tools</div>
             {TOOLS.map(t => <a key={t.id} href={`/${t.id}`} className="footer-link">{t.icon} {t.name} Calculator</a>)}
-            <a href="/bmi" className="footer-link"><img src="/bmi-icon.png" style={{width:'16px',height:'16px',objectFit:'contain',display:'inline-block',verticalAlign:'middle'}} /> BMI Calculator</a>
+            <a href="/ovulation" className="footer-link">🌸 Ovulation Calculator</a>
+            <a href="/bmi" className="footer-link"><img src="/bmi-icon.png" style={{width:"16px",height:"16px",objectFit:"contain",display:"inline-block",verticalAlign:"middle"}} /> BMI Calculator</a>
           </div>
           <div className="footer-links">
             <div className="footer-links-title">Site</div>
