@@ -315,8 +315,8 @@ const TOOLS = [
   {
     id: "nutrients",
     icon: "💊",
-    navLabel: "Optimal Nutrients",
-    name: "Optimal Nutrients Calculator",
+    navLabel: "Vitamin & Mineral",
+    name: "Vitamin & Mineral Calculator",
     desc: "Get personalized daily targets for 40+ essential nutrients based on your age, sex, diet and lifestyle.",
     tags: [{ label: "40+ Nutrients", color: "#10b981", bg: "rgba(16,185,129,.12)" }, { label: "NIH Data", color: "#38bdf8", bg: "rgba(56,189,248,.12)" }],
     featured: false,
