@@ -391,7 +391,7 @@ export default function SleepCalc() {
               <div className="tool-link-desc">Find your ideal fasting and eating windows across 6 protocols</div>
             </a>
             <a href="/nutrients" className="tool-link">
-              <div className="tool-link-name">💊 Optimal Daily Nutrient Intake<br/><span style={{paddingLeft:'26px'}}>Calculator</span></div>
+              <div className="tool-link-name">💊 Vitamin & Mineral Calculator</div>
               <div className="tool-link-desc">Get personalized daily nutrient targets for 40+ vitamins and minerals</div>
             </a>
             <a href="/bmi" className="tool-link">

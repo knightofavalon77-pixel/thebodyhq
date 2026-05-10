@@ -319,7 +319,7 @@ export default function App(){
 
     <div className="hero">
       <span className="hero-leaf">🌿</span>
-      <h1>Optimal Daily Nutrient<br/>Intake Calculator</h1>
+      <h1>Vitamin & Mineral Calculator</h1>
       <p className="hero-sub">Personalized recommendations for 40+ essential vitamins, minerals & compounds</p>
       <div className="hero-badges">
         <span className="badge">📚 NIH DRI Data</span>
@@ -425,13 +425,13 @@ export default function App(){
       {/* SEO CONTENT */}
       <div className="seo-section">
         <div className="seo-intro">
-          <h2>What Is an Optimal Daily Nutrient Intake Calculator?</h2>
-          <p>A vitamin and mineral calculator gives you <strong>personalized daily nutrient targets</strong> based on your specific age, sex, body weight, diet type, and life stage. Instead of generic one-size-fits-all recommendations, you get numbers that are actually relevant to your body and your lifestyle.</p>
+          <h2>What Is a Vitamin &amp; Mineral Calculator?</h2>
+          <p>A Vitamin &amp; Mineral Calculator gives you <strong>personalized daily nutrient targets</strong> based on your specific age, sex, body weight, diet type, and life stage. Instead of generic one-size-fits-all recommendations, you get numbers that are actually relevant to your body and your lifestyle.</p>
           <p>Most people have no idea how much Vitamin D, magnesium, iron, or Omega-3 they actually need. The reality is that <strong>nutrient needs vary dramatically</strong> between a 25-year-old male athlete, a 55-year-old postmenopausal woman, and a pregnant vegan. What is enough for one person may be dangerously deficient for another.</p>
           <p>The Body HQ Nutrient Calculator covers <strong>40+ essential vitamins, minerals, and beneficial compounds</strong> sourced from the National Academies of Sciences and the NIH Office of Dietary Supplements — the gold standard for dietary guidance in the United States.</p>
         </div>
         <div className="how-works">
-          <h2>How the Nutrient Calculator Works</h2>
+          <h2>How the Vitamin &amp; Mineral Calculator Works</h2>
           <div className="step-row"><div className="step-num">1</div><div className="step-txt"><strong>Enter your profile</strong> — select your biological sex, age group, and body weight using the lbs/kg toggle.</div></div>
           <div className="step-row"><div className="step-num">2</div><div className="step-txt"><strong>Select your life stage</strong> — choose Standard, Pregnant, or Breastfeeding. These dramatically change nutrient needs for folate, iron, iodine, and choline.</div></div>
           <div className="step-row"><div className="step-num">3</div><div className="step-txt"><strong>Choose your diet type</strong> — selecting Vegan or Vegetarian flags nutrients where plant-based eaters are most at risk of deficiency.</div></div>
