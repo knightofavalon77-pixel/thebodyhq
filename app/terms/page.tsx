@@ -5,24 +5,26 @@ import { useState } from "react";
 
 const S = () => (
   <style>{`
-    @import url('https://fonts.googleapis.com/css2?family=Syne:wght@700;800&family=DM+Sans:wght@300;400;500;600&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Syne:wght@700;800&display=swap');
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
     :root {
       --bg:#13131f; --card:#1a1a2e; --card2:#1e1e3a; --border:#2a2a45;
       --purple:#7c3aed; --purp-lt:#a78bfa; --cyan:#38bdf8; --cyan-lt:#7dd3fc;
       --white:#f8fafc; --muted:#94a3b8; --dim:#64748b;
     }
-    body { background: var(--bg); color: var(--white); font-family: 'DM Sans', sans-serif; min-height: 100vh; }
+    body { background: var(--bg); color: var(--white); font-family: 'Space Grotesk', sans-serif; min-height: 100vh; }
     nav { position: sticky; top: 0; z-index: 100; background: rgba(19,19,31,.92); backdrop-filter: blur(16px); border-bottom: 1px solid var(--border); padding: 0 24px; display: flex; align-items: center; justify-content: space-between; height: 64px; }
     .nav-brand { display: flex; align-items: center; gap: 10px; font-family: 'Syne', sans-serif; font-size: 18px; font-weight: 800; background: linear-gradient(135deg, var(--purp-lt), var(--cyan)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; text-decoration: none; }
     .nav-pulse { width: 32px; height: 20px; }
-    .nav-links { display: flex; gap: 6px; align-items: center; }
-    .nav-link { padding: 7px 14px; border-radius: 8px; text-decoration: none; font-size: 14px; font-weight: 500; color: var(--muted); transition: all .2s; border: 1px solid transparent; }
-    .nav-link:hover { color: var(--white); background: var(--card2); border-color: var(--border); }
+    .nav-links { display: flex; gap: 4px; align-items: center; overflow-x: auto; scrollbar-width: none; }
+    .nav-links::-webkit-scrollbar { display: none; }
+    .nav-link { padding: 6px 10px; border-radius: 8px; text-decoration: none; font-size: 13px; font-weight: 600; color: var(--muted); transition: all .2s; white-space: nowrap; font-family: 'Space Grotesk', sans-serif; }
+    .nav-link:hover { color: var(--white); background: var(--card2); }
     .nav-menu-btn { display: none; background: none; border: none; color: var(--white); font-size: 22px; cursor: pointer; }
     .mobile-menu { display: none; position: fixed; inset: 64px 0 0; background: rgba(19,19,31,.98); z-index: 99; flex-direction: column; align-items: center; justify-content: center; gap: 16px; }
     .mobile-menu.open { display: flex; }
-    .mobile-link { font-size: 20px; font-weight: 600; color: var(--white); text-decoration: none; padding: 12px 32px; border-radius: 12px; border: 1px solid var(--border); width: 260px; text-align: center; transition: all .2s; }
+    .mobile-link { font-size: 18px; font-weight: 600; color: var(--white); text-decoration: none; padding: 12px 28px; border-radius: 12px; border: 1px solid var(--border); width: 260px; text-align: center; transition: all .2s; font-family: 'Space Grotesk', sans-serif; }
+    .mobile-link:hover { background: var(--card2); border-color: var(--purple); }
     .hero { padding: 56px 24px 40px; text-align: center; position: relative; overflow: hidden; }
     .hero::before { content: ''; position: absolute; inset: 0; background: radial-gradient(ellipse 80% 60% at 50% 0%, rgba(124,58,237,.12), transparent 70%); }
     .hero-content { position: relative; z-index: 1; }
@@ -58,11 +60,11 @@ const S = () => (
 );
 
 const TOOLS = [
-  { id: "sleep", icon: "🌙", name: "Sleep" },
-  { id: "nutrients", icon: "💊", name: "Nutrients" },
-  { id: "fasting", icon: "⏰", name: "Fasting" },
-  { id: "pregnancy", icon: "🤰", name: "Pregnancy" },
-  { id: "burnout", icon: "🧠", name: "Burnout" },
+  { id: "sleep",     icon: "🌙", name: "Sleep Cycle" },
+  { id: "nutrients", icon: "💊", name: "Vitamin & Mineral" },
+  { id: "fasting",   icon: "⏰", name: "Intermittent Fasting" },
+  { id: "pregnancy", icon: "🤰", name: "Pregnancy Due Date" },
+  { id: "burnout",   icon: "🧠", name: "Stress & Burnout" },
 ];
 
 export default function Terms() {
@@ -73,7 +75,7 @@ export default function Terms() {
       <nav>
         <a href="/" className="nav-brand">
           <div className="nav-pulse">
-            <svg viewBox="0 0 32 20" fill="none">
+            <svg viewBox="0 0 32 20" fill="none" xmlns="http://www.w3.org/2000/svg">
               <defs><linearGradient id="pg" x1="0" y1="0" x2="32" y2="0" gradientUnits="userSpaceOnUse"><stop offset="0%" stopColor="#7c3aed"/><stop offset="100%" stopColor="#38bdf8"/></linearGradient></defs>
               <polyline points="0,10 8,10 10,4 12,16 14,8 16,12 18,10 32,10" stroke="url(#pg)" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" fill="none"/>
             </svg>
@@ -82,12 +84,13 @@ export default function Terms() {
         </a>
         <div className="nav-links">
           {TOOLS.map(t => <a key={t.id} href={`/${t.id}`} className="nav-link">{t.icon} {t.name}</a>)}
-          <a href="/about" className="nav-link">About</a>
+          <a href="/bmi" className="nav-link"><img src="/bmi-icon.png" style={{width:'16px',height:'16px',objectFit:'contain',display:'inline-block',verticalAlign:'middle'}} /> BMI Calculator</a>
         </div>
         <button className="nav-menu-btn" onClick={() => setMenuOpen(!menuOpen)}>{menuOpen ? "✕" : "☰"}</button>
       </nav>
       <div className={`mobile-menu${menuOpen ? " open" : ""}`}>
         {TOOLS.map(t => <a key={t.id} href={`/${t.id}`} className="mobile-link" onClick={() => setMenuOpen(false)}>{t.icon} {t.name}</a>)}
+        <a href="/bmi" className="mobile-link" onClick={() => setMenuOpen(false)}><img src="/bmi-icon.png" style={{width:'18px',height:'18px',objectFit:'contain',display:'inline-block',verticalAlign:'middle'}} /> BMI Calculator</a>
       </div>
 
       <div className="hero">
@@ -180,6 +183,7 @@ export default function Terms() {
           <div className="footer-links">
             <div className="footer-links-title">Tools</div>
             {TOOLS.map(t => <a key={t.id} href={`/${t.id}`} className="footer-link">{t.icon} {t.name} Calculator</a>)}
+            <a href="/bmi" className="footer-link"><img src="/bmi-icon.png" style={{width:'16px',height:'16px',objectFit:'contain',display:'inline-block',verticalAlign:'middle'}} /> BMI Calculator</a>
           </div>
           <div className="footer-links">
             <div className="footer-links-title">Site</div>
