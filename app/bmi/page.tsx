@@ -316,7 +316,7 @@ export default function App() {
 
       {/* NAV — matches homepage */}
       <nav>
-        <a href="/" className="nav-brand">
+        <a href="https://www.thebodyhq.com" className="nav-brand">
           <div className="nav-pulse">
             <svg viewBox="0 0 32 20" fill="none" xmlns="http://www.w3.org/2000/svg">
               <defs><linearGradient id="pg" x1="0" y1="0" x2="32" y2="0" gradientUnits="userSpaceOnUse"><stop offset="0%" stopColor="#7c3aed"/><stop offset="100%" stopColor="#38bdf8"/></linearGradient></defs>
